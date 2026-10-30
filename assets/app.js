@@ -9,6 +9,25 @@ const LS_SESSION = "sathi_proto_session";
 const LS_BOOKINGS = "sathi_proto_bookings";
 const LS_LEADS = "sathi_proto_leads";
 
+// ---------- analytics (PostHog) ----------
+// track() is a thin, defensive wrapper: if the PostHog snippet hasn't loaded
+// (blocked, offline, etc.) this silently no-ops rather than breaking the app.
+// Event names/properties follow the real Sathi V0 Analytics PRD where this
+// static prototype can support them.
+function track(event, props) {
+  try {
+    if (window.posthog && typeof window.posthog.capture === "function") {
+      window.posthog.capture(event, props || {});
+    }
+  } catch (e) { /* no-op */ }
+}
+
+let lastClickSource = null;   // surface a trip card was clicked from, read once by openDetail()
+let lastTab = null;           // previous detail tab, for trip_tab_viewed
+let lastTabAt = null;         // timestamp the current tab was opened, for seconds_on_previous_tab
+let seenDays = new Set();     // itinerary days already counted as viewed, reset per trip
+let lastFilters = { focus: "", difficulty: "" }; // for computing trip_list_filtered's action
+
 function esc(s) { const d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
 
 function getSession() { try { return JSON.parse(localStorage.getItem(LS_SESSION)); } catch (e) { return null; } }
@@ -38,7 +57,15 @@ function go(view, arg) {
   document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
   document.getElementById("view-" + view).classList.add("active");
   window.scrollTo(0, 0);
-  if (view === "browse") renderBrowse();
+  if (view === "browse") {
+    const r = renderBrowse();
+    lastFilters = { ...r.filters };
+    track("trip_list_viewed", {
+      filter_applied: !!(r.filters.focus || r.filters.difficulty),
+      filters: r.filters,
+      result_count: r.count,
+    });
+  }
   if (view === "home") renderHome();
   if (view === "detail" && arg) openDetail(arg);
   if (view === "mytrips") renderMyTrips();
@@ -46,19 +73,37 @@ function go(view, arg) {
   history.replaceState(null, "", "#" + view + (arg ? "/" + arg : ""));
 }
 
+function homeElementClick(element) {
+  track("home_element_clicked", { element });
+}
+
+function onFilterChange(changedType) {
+  const r = renderBrowse();
+  const value = changedType === "focus" ? r.filters.focus : r.filters.difficulty;
+  const prevValue = lastFilters[changedType];
+  const action = value && !prevValue ? "added" : (!value && prevValue ? "removed" : "changed");
+  track("trip_list_filtered", {
+    filter_type: changedType,
+    filter_value: value || null,
+    action,
+    result_count: r.count,
+  });
+  lastFilters = { ...r.filters };
+}
+
 // ---------- Home ----------
 function renderHome() {
   const popular = [...CATALOG].sort((a, b) => a.popularity_rank - b.popularity_rank).slice(0, 3);
-  document.getElementById("popular-trips").innerHTML = popular.map(tripCardHtml).join("");
+  document.getElementById("popular-trips").innerHTML = popular.map((t, i) => tripCardHtml(t, "home_popular", i + 1)).join("");
 }
 
 // ---------- Trip card (shared between Home + Browse) ----------
-function tripCardHtml(t) {
+function tripCardHtml(t, surface, position) {
   const thumb = t.image
     ? `<img class="thumb" src="${esc(t.image)}" alt="${esc(t.title)}">`
     : `<div class="thumb-placeholder">${esc(t.title)}</div>`;
   const focusLabel = (t.focus && t.focus[0]) ? t.focus[0].charAt(0).toUpperCase() + t.focus[0].slice(1) : "Trip";
-  return `<div class="trip-card" onclick="go('detail','${t.slug}')">
+  return `<div class="trip-card" onclick="cardClick('${t.slug}','${surface}',${position})">
     ${thumb}
     <div class="body">
       <div class="focus-tag">${esc(focusLabel)}</div>
@@ -66,14 +111,24 @@ function tripCardHtml(t) {
       <div class="meta">${t.duration_days} days &middot; ${cap(t.difficulty)} &middot; ${esc((t.tags && t.tags[0]) || "")}</div>
       <div class="price-row">
         <div class="price">From $${t.price_from_traveler} <small>/ person</small></div>
-        <button class="btn btn-secondary" style="padding:7px 12px;font-size:12px;" onclick="event.stopPropagation(); go('detail','${t.slug}')">View details</button>
+        <button class="btn btn-secondary" style="padding:7px 12px;font-size:12px;" onclick="event.stopPropagation(); cardClick('${t.slug}','${surface}',${position})">View details</button>
       </div>
     </div>
   </div>`;
 }
 function cap(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : ""; }
 
+// trip_card_clicked fires here, once, regardless of which element inside the
+// card was tapped — then the real navigation proceeds as before.
+function cardClick(slug, surface, position) {
+  track("trip_card_clicked", { trip_id: slug, surface, position });
+  lastClickSource = surface;
+  go("detail", slug);
+}
+
 // ---------- Browse ----------
+// Returns { count, filters } so callers (go(), onFilterChange()) can fire the
+// right analytics event without re-deriving filter state themselves.
 function renderBrowse() {
   const focusSel = document.getElementById("filter-focus");
   if (focusSel.options.length <= 1) {
@@ -84,7 +139,9 @@ function renderBrowse() {
   const diffVal = document.getElementById("filter-difficulty").value;
   let list = CATALOG.filter(t => (!focusVal || t.focus.includes(focusVal)) && (!diffVal || t.difficulty === diffVal));
   list = list.sort((a, b) => a.popularity_rank - b.popularity_rank);
-  document.getElementById("browse-grid").innerHTML = list.map(tripCardHtml).join("") || '<p class="empty-note">No trips match those filters.</p>';
+  const surface = (focusVal || diffVal) ? "all_trips_filtered" : "all_trips";
+  document.getElementById("browse-grid").innerHTML = list.map((t, i) => tripCardHtml(t, surface, i + 1)).join("") || '<p class="empty-note">No trips match those filters.</p>';
+  return { count: list.length, filters: { focus: focusVal, difficulty: diffVal } };
 }
 
 // ---------- Trip detail ----------
@@ -92,6 +149,11 @@ function openDetail(slug) {
   currentSlug = slug;
   const t = CATALOG.find(c => c.slug === slug);
   if (!t) return;
+  track("trip_details_viewed", { trip_id: slug, source_section: lastClickSource || null });
+  lastClickSource = null;
+  lastTab = null;
+  lastTabAt = null;
+  seenDays = new Set();
   document.getElementById("detail-crumb-title").textContent = t.title;
   document.getElementById("detail-hero-wrap").innerHTML = t.image
     ? `<img class="detail-hero" src="${esc(t.image)}" alt="${esc(t.title)}">`
@@ -124,7 +186,7 @@ function openDetail(slug) {
   document.getElementById("pane-itinerary").innerHTML = `
     <p style="color:var(--ink-soft);font-size:13.5px;margin-bottom:16px;">${t.duration_days} days, day by day.</p>
     ${t.days.map(d => `
-      <div class="day-card">
+      <div class="day-card" data-day="${d.day}">
         <div class="d-head">
           <span class="d-num">Day ${d.day}</span>
           <span class="d-title">${esc(d.title)}</span>
@@ -137,7 +199,7 @@ function openDetail(slug) {
   // FAQ tab — grounded, non-duplicated content; altitude question only shown when relevant
   const faqs = buildFaqs(t, maxAlt);
   document.getElementById("pane-faq").innerHTML = faqs.map((f, i) => `
-    <div class="faq-item" onclick="this.classList.toggle('open')">
+    <div class="faq-item" onclick="toggleFaq(this, 'faq_${i}')">
       <div class="q">${esc(f.q)} <span>${'▾'}</span></div>
       <div class="a">${esc(f.a)}</div>
     </div>`).join("");
@@ -164,6 +226,44 @@ function switchDetailTab(tab) {
   document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b.dataset.tab === tab));
   document.querySelectorAll(".tab-pane").forEach(p => p.classList.remove("active"));
   document.getElementById("pane-" + tab).classList.add("active");
+
+  const now = Date.now();
+  const secondsOnPrevious = lastTabAt ? Math.round((now - lastTabAt) / 1000) : null;
+  track("trip_tab_viewed", { trip_id: currentSlug, tab, previous_tab: lastTab, seconds_on_previous_tab: secondsOnPrevious });
+  lastTab = tab;
+  lastTabAt = now;
+
+  if (tab === "itinerary") observeDayCards();
+}
+
+// Fires itinerary_day_viewed once per day, the first time at least half of that
+// day's card has been on screen for 1s+ — mirrors the PRD's "viewed impression" rule.
+function observeDayCards() {
+  const cards = document.querySelectorAll("#pane-itinerary .day-card");
+  if (!cards.length) return;
+  const t = CATALOG.find(c => c.slug === currentSlug);
+  const totalDays = t ? t.duration_days : cards.length;
+  const slugAtObserveTime = currentSlug;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        const day = Number(entry.target.dataset.day);
+        if (!seenDays.has(day) && currentSlug === slugAtObserveTime) {
+          seenDays.add(day);
+          track("itinerary_day_viewed", { trip_id: slugAtObserveTime, day_number: day, total_days: totalDays });
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  cards.forEach(c => observer.observe(c));
+}
+
+// toggleFaq fires faq_opened only on the open transition, not on collapse.
+function toggleFaq(el, faqId) {
+  const opening = !el.classList.contains("open");
+  el.classList.toggle("open");
+  if (opening) track("faq_opened", { trip_id: currentSlug, faq_id: faqId });
 }
 
 // ---------- Booking flow ----------
@@ -179,6 +279,7 @@ function formatDateLabel(dateStr) {
 
 function startBooking() {
   const t = CATALOG.find(c => c.slug === currentSlug);
+  track("select_dates_clicked", { trip_id: t.slug, price_shown: t.price_from_traveler, tab: lastTab });
   bookingDraft = { slug: t.slug, title: t.title, durationDays: t.duration_days };
   document.getElementById("booking-trip-title").textContent = t.title;
   document.getElementById("booking-trip-sub").textContent = `${t.duration_days} days · From $${t.price_from_traveler}/person`;
@@ -189,6 +290,7 @@ function startBooking() {
   document.getElementById("booking-travellers").value = "1";
   showBookingStep(1);
   go("booking");
+  track("booking_started", { trip_id: t.slug });
 }
 
 // Start date picked (or changed): auto-populate the end date to start + the itinerary's
@@ -228,6 +330,15 @@ function bookingNext() {
   bookingDraft.date = date;
   bookingDraft.endDate = endDate;
   bookingDraft.travellers = document.getElementById("booking-travellers").value;
+
+  const leadTimeDays = Math.round((new Date(date + "T00:00:00") - new Date()) / 86400000);
+  track("dates_selected", {
+    trip_id: bookingDraft.slug,
+    start_month: date.slice(0, 7),
+    lead_time_days: leadTimeDays,
+    group_size: Number(bookingDraft.travellers),
+  });
+
   const session = getSession();
   if (session) {
     completeBooking(session.email);
@@ -243,6 +354,7 @@ function submitLead() {
   const leads = getLeads();
   leads.push({ slug: bookingDraft.slug, title: bookingDraft.title, date: bookingDraft.date, endDate: bookingDraft.endDate, travellers: bookingDraft.travellers, email, capturedAt: new Date().toISOString() });
   saveLeads(leads);
+  track("lead_captured", { trip_id: bookingDraft.slug });
   showBookingStep(3);
   document.getElementById("confirm-box-content").innerHTML = `
     <div class="icon">&#128231;</div>
@@ -260,6 +372,7 @@ function completeBooking(email) {
   };
   bookings.push(booking);
   saveBookings(bookings);
+  track("booking_confirmed", { trip_id: booking.slug, booking_id: booking.id, group_size: Number(booking.travellers) });
   showBookingStep(3);
   document.getElementById("confirm-box-content").innerHTML = `
     <div class="icon">&#9989;</div>
@@ -278,6 +391,11 @@ function doSignIn() {
   const email = document.getElementById("signin-email").value.trim();
   if (!name || !email || !email.includes("@")) { alert("Enter your name and a valid email."); return; }
   setSession({ name, email });
+  // Link this browser's prior anonymous events to a real identity — same
+  // concept as the PRD's user_id, using email as the identifier for now.
+  if (window.posthog && typeof window.posthog.identify === "function") {
+    posthog.identify(email, { name });
+  }
   if (bookingDraft && bookingDraft.date) {
     go("booking");
     completeBooking(email);
@@ -328,6 +446,8 @@ function clearAllData() {
 }
 
 // ---------- init ----------
+track("session_started", { device_type: /Mobi|Android/i.test(navigator.userAgent) ? "mobile" : "desktop" });
+
 fetch("assets/catalog.json").then(r => r.json()).then(data => {
   CATALOG = data;
   renderSessionArea();
