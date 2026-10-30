@@ -22,6 +22,20 @@ function track(event, props) {
   } catch (e) { /* no-op */ }
 }
 
+// Dev/test tagging (PRD's is_internal flag): visit once with ?internal=1 in
+// the URL and PostHog remembers it for this browser (posthog.register persists
+// in local storage), stamping is_internal=true on every future event from
+// here on — including across later visits with no query param. This tags the
+// traffic only; no report filter is configured, so these events still show up
+// fully in every funnel/insight.
+try {
+  if (window.posthog && typeof window.posthog.register === "function") {
+    if (new URLSearchParams(location.search).get("internal") === "1") {
+      posthog.register({ is_internal: true });
+    }
+  }
+} catch (e) { /* no-op */ }
+
 let lastClickSource = null;   // surface a trip card was clicked from, read once by openDetail()
 let lastTab = null;           // previous detail tab, for trip_tab_viewed
 let lastTabAt = null;         // timestamp the current tab was opened, for seconds_on_previous_tab
@@ -95,6 +109,10 @@ function onFilterChange(changedType) {
 function renderHome() {
   const popular = [...CATALOG].sort((a, b) => a.popularity_rank - b.popularity_rank).slice(0, 3);
   document.getElementById("popular-trips").innerHTML = popular.map((t, i) => tripCardHtml(t, "home_popular", i + 1)).join("");
+  trackCardImpressions(
+    popular.map((t, i) => ({ slug: t.slug, surface: "home_popular", position: i + 1 })),
+    "#popular-trips", {}, popular.length
+  );
 }
 
 // ---------- Trip card (shared between Home + Browse) ----------
@@ -103,7 +121,7 @@ function tripCardHtml(t, surface, position) {
     ? `<img class="thumb" src="${esc(t.image)}" alt="${esc(t.title)}">`
     : `<div class="thumb-placeholder">${esc(t.title)}</div>`;
   const focusLabel = (t.focus && t.focus[0]) ? t.focus[0].charAt(0).toUpperCase() + t.focus[0].slice(1) : "Trip";
-  return `<div class="trip-card" onclick="cardClick('${t.slug}','${surface}',${position})">
+  return `<div class="trip-card" data-slug="${esc(t.slug)}" onclick="cardClick('${t.slug}','${surface}',${position})">
     ${thumb}
     <div class="body">
       <div class="focus-tag">${esc(focusLabel)}</div>
@@ -124,6 +142,49 @@ function cardClick(slug, surface, position) {
   track("trip_card_clicked", { trip_id: slug, surface, position });
   lastClickSource = surface;
   go("detail", slug);
+}
+
+// "Viewed impression" per the PRD: count a card only once it's at least half
+// on screen for at least 1 second — a card nobody scrolls to never fires one,
+// and a card scrolled past too fast to read doesn't either. One shared
+// observer is kept across renders (disconnecting the previous one each time)
+// since only one list is ever visible at once.
+let activeImpressionObserver = null;
+function trackCardImpressions(items, containerSelector, filters, resultCount) {
+  if (activeImpressionObserver) activeImpressionObserver.disconnect();
+  const byEl = new Map();
+  document.querySelectorAll(containerSelector + " .trip-card").forEach(el => {
+    const item = items.find(it => it.slug === el.dataset.slug);
+    if (item) byEl.set(el, item);
+  });
+  const timers = new Map();
+  const seen = new Set();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const item = byEl.get(entry.target);
+      if (!item) return;
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+        if (!timers.has(entry.target)) {
+          timers.set(entry.target, setTimeout(() => {
+            if (!seen.has(item.slug)) {
+              seen.add(item.slug);
+              track("trip_card_impressed", {
+                trip_id: item.slug, surface: item.surface, position: item.position,
+                filters, result_count: resultCount,
+              });
+            }
+            observer.unobserve(entry.target);
+            timers.delete(entry.target);
+          }, 1000));
+        }
+      } else if (timers.has(entry.target)) {
+        clearTimeout(timers.get(entry.target));
+        timers.delete(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  byEl.forEach((_, el) => observer.observe(el));
+  activeImpressionObserver = observer;
 }
 
 // ---------- Browse ----------
