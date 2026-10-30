@@ -1,0 +1,1867 @@
+[
+  {
+    "title": "Everest Base Camp Trek",
+    "slug": "everest-base-camp",
+    "description": "The world's most iconic trek. Stand at 5,364m beneath the Khumbu Icefall with Everest filling your entire field of view. A Sherpa-guided 14-day journey through monasteries, rhododendron forests, and high-altitude villages.",
+    "duration_days": 14,
+    "difficulty": "challenging",
+    "price_from_usd": 1200,
+    "price_to_usd": 2800,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "himalaya",
+      "everest",
+      "khumbu",
+      "high-altitude",
+      "sherpa"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November"
+    ],
+    "hero_image_url": "/images/everest-base-camp-trek.png",
+    "popularity_rank": 1,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu",
+        "title": "Arrive & briefing",
+        "bullets": [
+          "Fly into TIA, transfer to Thamel hotel",
+          "Equipment check and guide briefing",
+          "Boudhanath stupa visit for good luck"
+        ],
+        "insider_tip": "Buy your down jacket on Tridevi Marg \u2014 40% cheaper than renting in Namche.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 2,
+        "location": "Lukla \u2192 Phakding",
+        "title": "Fly to Lukla, first steps",
+        "bullets": [
+          "25-min mountain flight to Tenzing-Hillary Airport",
+          "Trek 3h downhill through rhododendron forest",
+          "Cross suspension bridges over the Dudh Kosi river"
+        ],
+        "insider_tip": "Book the first morning Lukla flight \u2014 afternoon fog causes most cancellations.",
+        "altitude_m": 2610
+      },
+      {
+        "day": 3,
+        "location": "Phakding \u2192 Namche Bazaar",
+        "title": "Climb to the Sherpa capital",
+        "bullets": [
+          "Steep 3h ascent through pine forest",
+          "First views of Everest peek above the ridgeline",
+          "Namche Bazaar \u2014 the Everest region's only proper town"
+        ],
+        "insider_tip": "The Namche bakery opens at 7am. Their cinnamon rolls are the best thing you'll eat on the trek.",
+        "altitude_m": 3440
+      },
+      {
+        "day": 4,
+        "location": "Namche Bazaar",
+        "title": "Acclimatisation day",
+        "bullets": [
+          "Hike to Everest View Hotel (3,880m) \u2014 panoramic views of Everest, Lhotse, Ama Dablam",
+          "Visit the Sherpa Museum and Hillary School",
+          "Rest afternoon; hydrate aggressively"
+        ],
+        "insider_tip": "The Saturday market in Namche sells yak cheese, local honey, and fresh-baked bread. Worth waking up for.",
+        "altitude_m": 3440
+      },
+      {
+        "day": 5,
+        "location": "Namche \u2192 Tengboche",
+        "title": "The monastery ridge",
+        "bullets": [
+          "Trek past Khumjung village (Hillary's school)",
+          "Dramatic ridge walk with Ama Dablam dead ahead",
+          "Tengboche Monastery \u2014 largest in the Khumbu"
+        ],
+        "insider_tip": "Arrive at Tengboche in time for the 3pm puja (prayer ceremony) \u2014 open to trekkers.",
+        "altitude_m": 3867
+      },
+      {
+        "day": 6,
+        "location": "Tengboche \u2192 Dingboche",
+        "title": "Into the high valley",
+        "bullets": [
+          "Descend to Imja Khola river, then steep climb to Dingboche",
+          "Panorama of Lhotse South Face and Island Peak",
+          "Extra fluids \u2014 altitude effects peak here for many"
+        ],
+        "insider_tip": "Dingboche has the best potato soup on the route. Order it for dinner the night before your acclimatisation hike.",
+        "altitude_m": 4360
+      },
+      {
+        "day": 7,
+        "location": "Dingboche",
+        "title": "Acclimatisation \u2014 Nagarjun Hill",
+        "bullets": [
+          "Morning hike to Nagarjun Hill (5,100m) \u2014 highest point so far",
+          "360\u00b0 views of Makalu, Lhotse, Baruntse, Ama Dablam",
+          "Afternoon rest in lodge"
+        ],
+        "insider_tip": "Altitude headaches hit hardest on day 7-8. Keep diamox ready and don't skip the acclimatisation hike \u2014 it works.",
+        "altitude_m": 4360
+      },
+      {
+        "day": 8,
+        "location": "Dingboche \u2192 Lobuche",
+        "title": "Memorial chortens",
+        "bullets": [
+          "Trek through the Khumbu glacier moraine",
+          "Pass Thukla Pass and the climber memorial chortens",
+          "Lobuche \u2014 last village before Gorak Shep"
+        ],
+        "insider_tip": "The Lobuche memorial chortens honour climbers who died on Everest. Take time here \u2014 it's humbling.",
+        "altitude_m": 4940
+      },
+      {
+        "day": 9,
+        "location": "Lobuche \u2192 Gorak Shep \u2192 EBC",
+        "title": "Base Camp day",
+        "bullets": [
+          "Early start, 4h to Gorak Shep (drop bags)",
+          "2h to Everest Base Camp across the Khumbu Glacier",
+          "Return to Gorak Shep for the night"
+        ],
+        "insider_tip": "EBC is most photogenic in late afternoon when the glacier ice turns blue. The actual summit is hidden \u2014 Kala Patthar has the better view.",
+        "altitude_m": 5364
+      },
+      {
+        "day": 10,
+        "location": "Gorak Shep \u2192 Pheriche",
+        "title": "Kala Patthar sunrise, then down",
+        "bullets": [
+          "Pre-dawn climb to Kala Patthar (5,545m) \u2014 best Everest view on the planet",
+          "Long descent to Pheriche \u2014 knees will feel it",
+          "Hot shower and real food in Pheriche"
+        ],
+        "insider_tip": "Kala Patthar summit at 5:30am. Bring every layer you own \u2014 windchill at -20\u00b0C is common.",
+        "altitude_m": 5545
+      },
+      {
+        "day": 11,
+        "location": "Pheriche \u2192 Namche",
+        "title": "The knees day",
+        "bullets": [
+          "Long descent past Tengboche and Phunki Tenga",
+          "Back to Namche \u2014 feels almost luxurious now",
+          "Celebration dinner"
+        ],
+        "insider_tip": "Your knees will be screaming. Trekking poles are not optional on descent \u2014 rent them in Namche if you don't have them.",
+        "altitude_m": 3440
+      },
+      {
+        "day": 12,
+        "location": "Namche \u2192 Lukla",
+        "title": "Final trail day",
+        "bullets": [
+          "One last big descent to Lukla",
+          "Farewell raksi with your guide and porter",
+          "Lukla guesthouses fill up \u2014 book before arriving"
+        ],
+        "insider_tip": "Tip your porter well \u2014 NRs 1,500\u20132,000/day is the fair standard. They carried everything.",
+        "altitude_m": 2860
+      },
+      {
+        "day": 13,
+        "location": "Lukla \u2192 Kathmandu",
+        "title": "Fly out, celebrate",
+        "bullets": [
+          "Morning flight back to Kathmandu (weather permitting \u2014 book flexible)",
+          "Hot shower, real bed, and a meal that isn't dal bhat",
+          "Thamel evening"
+        ],
+        "insider_tip": "Always book a buffer day in Lukla \u2014 weather delays are extremely common. Budget one extra night.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 14,
+        "location": "Kathmandu",
+        "title": "Depart or extend",
+        "bullets": [
+          "City tour or rest day",
+          "Shopping for pashminas and thankas in Thamel",
+          "Depart or extend with Chitwan / Pokhara"
+        ],
+        "insider_tip": "Himalayan Java on Thamel Marg has the best espresso in Kathmandu. You've earned it.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 1380,
+    "price_to_traveler": 3220,
+    "image": "assets/images/everest-base-camp-trek.png",
+    "has_real_photo": true
+  },
+  {
+    "title": "Annapurna Circuit",
+    "slug": "annapurna-circuit",
+    "description": "The classic full circuit \u2014 16 days crossing the Thorong La pass (5,416m) through subtropical forests, Hindu temples, Tibetan villages, and high desert. One of the greatest treks on earth.",
+    "duration_days": 16,
+    "difficulty": "challenging",
+    "price_from_usd": 950,
+    "price_to_usd": 2200,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "annapurna",
+      "thorong-la",
+      "mustang",
+      "circuit",
+      "high-altitude"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 2,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Besisahar",
+        "title": "Drive to trailhead",
+        "bullets": [
+          "6h drive to Besisahar (760m)",
+          "Trek introduction briefing",
+          "Night in teahouse"
+        ],
+        "insider_tip": "Take the early bus \u2014 afternoon roads into the hills get busy with tourist jeeps.",
+        "altitude_m": 760
+      },
+      {
+        "day": 2,
+        "location": "Besisahar \u2192 Bahundanda",
+        "title": "Enter the gorge",
+        "bullets": [
+          "Trek through rice paddies and subtropical forest",
+          "First suspension bridges over the Marsyangdi river",
+          "Night in Bahundanda (1,310m)"
+        ],
+        "insider_tip": "The Marsyangdi is one of the world's fastest-dropping rivers. The gorge walls close in dramatically from day 2 onward.",
+        "altitude_m": 1310
+      },
+      {
+        "day": 3,
+        "location": "Bahundanda \u2192 Chamje",
+        "title": "Waterfalls day",
+        "bullets": [
+          "Multiple waterfalls along the trail",
+          "Steep climb out of the gorge then down again",
+          "Cross the Marsyangdi several times"
+        ],
+        "insider_tip": "Fill water bottles at the last village before the big climb \u2014 next reliable water is 2h away.",
+        "altitude_m": 1430
+      },
+      {
+        "day": 4,
+        "location": "Chamje \u2192 Dharapani",
+        "title": "Enter the Himalaya",
+        "bullets": [
+          "Climb steadily into Manang district",
+          "First alpine views as the vegetation changes",
+          "Dharapani \u2014 entry to the restricted Manang zone"
+        ],
+        "insider_tip": "Check your TIMS and ACAP permits at the checkpoint. Missing either means turning back.",
+        "altitude_m": 1960
+      },
+      {
+        "day": 5,
+        "location": "Dharapani \u2192 Chame",
+        "title": "High valley floor",
+        "bullets": [
+          "Chame \u2014 district headquarters, last ATM before Manang",
+          "Pine forests and the dramatic Paungda Danda rock face",
+          "Hot springs in Chame"
+        ],
+        "insider_tip": "The Chame hot springs are hidden behind the main teahouses \u2014 ask your guide. Worth it after a long day.",
+        "altitude_m": 2670
+      },
+      {
+        "day": 6,
+        "location": "Chame \u2192 Pisang",
+        "title": "Annapurna II reveals itself",
+        "bullets": [
+          "Dramatic curved mountain face on the approach to Pisang",
+          "Lower Pisang has guesthouses; upper Pisang has the monastery",
+          "First views of the full Annapurna range"
+        ],
+        "insider_tip": "Stay in Upper Pisang for sunrise views over the valley \u2014 the lower village is fine but the views are ordinary.",
+        "altitude_m": 3300
+      },
+      {
+        "day": 7,
+        "location": "Pisang \u2192 Manang",
+        "title": "Acclimatisation walk to Manang",
+        "bullets": [
+          "Trek via Bhraka and Ngawal for better views than the valley road",
+          "Tibetan culture becomes dominant \u2014 prayer flags everywhere",
+          "Manang \u2014 largest village before the pass"
+        ],
+        "insider_tip": "The Manang bakery is genuinely excellent. Stock up on energy bars and walnut cake for the pass day.",
+        "altitude_m": 3500
+      },
+      {
+        "day": 8,
+        "location": "Manang",
+        "title": "Acclimatisation day",
+        "bullets": [
+          "Hike to Gangapurna Lake (3,540m) \u2014 stunning glacier lake",
+          "Optional: Ice Lake (4,600m) for serious acclimatisation",
+          "Altitude briefing at the Himalayan Rescue Association clinic (mandatory)"
+        ],
+        "insider_tip": "The HRA clinic in Manang gives a free daily talk on altitude sickness at 3pm. Don't skip it \u2014 it saves lives.",
+        "altitude_m": 3500
+      },
+      {
+        "day": 9,
+        "location": "Manang \u2192 Yak Kharka",
+        "title": "High pastures",
+        "bullets": [
+          "Gradual climb to 4,018m through yak grazing land",
+          "Apple orchards and mani walls",
+          "Short day \u2014 rest is key before the pass"
+        ],
+        "insider_tip": "Eat a big dinner tonight. You'll need every calorie for tomorrow's 5am start.",
+        "altitude_m": 4018
+      },
+      {
+        "day": 10,
+        "location": "Yak Kharka \u2192 Thorong La \u2192 Muktinath",
+        "title": "The big pass",
+        "bullets": [
+          "3am start to beat afternoon winds on Thorong La (5,416m)",
+          "4-5h climb to the pass, then 1,600m descent to Muktinath",
+          "Muktinath \u2014 sacred Hindu and Buddhist temple at 3,800m"
+        ],
+        "insider_tip": "The descent is brutal on knees but stunning. Take poles. The tea house at the top of the pass has the best hot lemon of your life.",
+        "altitude_m": 5416
+      },
+      {
+        "day": 11,
+        "location": "Muktinath \u2192 Kagbeni",
+        "title": "Into the Mustang landscape",
+        "bullets": [
+          "Trek down the Jhong Khola valley to Kagbeni",
+          "Mars-like landscape \u2014 red and ochre cliffs, zero vegetation",
+          "Kagbeni \u2014 gateway to Upper Mustang"
+        ],
+        "insider_tip": "Kagbeni has the best dal bhat on the circuit. The Red House Lodge is legendary among trekkers.",
+        "altitude_m": 2810
+      },
+      {
+        "day": 12,
+        "location": "Kagbeni \u2192 Marpha",
+        "title": "Apple brandy country",
+        "bullets": [
+          "Pass through Jomsom \u2014 regional hub and airstrip",
+          "Marpha \u2014 the apple capital of Nepal",
+          "Sample local apple brandy (raksi) and apple pie"
+        ],
+        "insider_tip": "Marpha apple products are excellent \u2014 buy jams and dried apple chips to take home.",
+        "altitude_m": 2670
+      },
+      {
+        "day": 13,
+        "location": "Marpha \u2192 Tatopani",
+        "title": "Long descent to hot springs",
+        "bullets": [
+          "Long downhill day through subtropical forest",
+          "Tatopani \u2014 famous hot springs at the bottom of the valley",
+          "Soak for as long as you like"
+        ],
+        "insider_tip": "Tatopani's riverside hot spring pools fill up by 5pm. Get there by 4pm.",
+        "altitude_m": 1190
+      },
+      {
+        "day": 14,
+        "location": "Tatopani \u2192 Ghorepani",
+        "title": "The punishing climb",
+        "bullets": [
+          "2,000m climb from hot springs to Ghorepani",
+          "One of the hardest ascent days on the circuit",
+          "Rhododendron forest \u2014 spectacular in bloom (March-April)"
+        ],
+        "insider_tip": "This climb is harder than the pass for most people. Start at 7am and take your time.",
+        "altitude_m": 2860
+      },
+      {
+        "day": 15,
+        "location": "Ghorepani \u2192 Poon Hill \u2192 Nayapul",
+        "title": "Poon Hill sunrise, then out",
+        "bullets": [
+          "Pre-dawn hike to Poon Hill (3,210m) \u2014 Annapurna panorama at sunrise",
+          "Long descent to Nayapul via Ulleri",
+          "Jeep or bus to Pokhara"
+        ],
+        "insider_tip": "Poon Hill at sunrise with Dhaulagiri and the full Annapurna range in alpenglow is one of the great mountain views on earth.",
+        "altitude_m": 3210
+      },
+      {
+        "day": 16,
+        "location": "Pokhara",
+        "title": "Rest in Pokhara",
+        "bullets": [
+          "Lakeside Pokhara \u2014 rest and celebrate",
+          "Phewa Lake boat ride",
+          "Farewell dinner"
+        ],
+        "insider_tip": "The Pokhara waterfront has great sunset views. Book a table at an outdoor lakeside restaurant for your last evening.",
+        "altitude_m": 820
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 1093,
+    "price_to_traveler": 2530,
+    "image": "assets/images/hero-annapurna.png",
+    "has_real_photo": false
+  },
+  {
+    "title": "Annapurna Base Camp Trek",
+    "slug": "annapurna-base-camp",
+    "description": "Enter the Annapurna Sanctuary \u2014 a glacial amphitheatre ringed by 8,000m peaks. 9 days through terraced villages, rhododendron forests, and a dramatic final push to the base of Annapurna I.",
+    "duration_days": 9,
+    "difficulty": "moderate",
+    "price_from_usd": 750,
+    "price_to_usd": 1600,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "annapurna",
+      "base-camp",
+      "sanctuary",
+      "moderate"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "October",
+      "November"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 3,
+    "days": [
+      {
+        "day": 1,
+        "location": "Pokhara \u2192 Nayapul \u2192 Tikhedunga",
+        "title": "Trail start",
+        "bullets": [
+          "Drive 1.5h from Pokhara to Nayapul",
+          "Trek through Modi Khola valley",
+          "Night in Tikhedunga"
+        ],
+        "insider_tip": "The trail to ABC is heavily walked \u2014 the teahouses are good but book ahead in peak season (Oct-Nov).",
+        "altitude_m": 1540
+      },
+      {
+        "day": 2,
+        "location": "Tikhedunga \u2192 Ghorepani",
+        "title": "Climb through rhododendrons",
+        "bullets": [
+          "3,500-step stone staircase to Ulleri",
+          "Rhododendron forest in full bloom (March-April)",
+          "Ghorepani \u2014 classic mountain village"
+        ],
+        "insider_tip": "The rhododendron forest between Ulleri and Ghorepani is the most beautiful forest section of any Nepal trek in bloom season.",
+        "altitude_m": 2860
+      },
+      {
+        "day": 3,
+        "location": "Ghorepani \u2192 Tadapani",
+        "title": "Poon Hill optional sunrise, ridge walk",
+        "bullets": [
+          "Optional pre-dawn Poon Hill hike (3,210m) for panoramic views",
+          "Ridge walk through giant rhododendron trees to Tadapani",
+          "Good Annapurna South and Hiunchuli views"
+        ],
+        "insider_tip": "If you're doing Poon Hill, wake at 4:30am. The walk to the viewpoint takes 45 minutes.",
+        "altitude_m": 2630
+      },
+      {
+        "day": 4,
+        "location": "Tadapani \u2192 Chhomrong",
+        "title": "Gateway to the Sanctuary",
+        "bullets": [
+          "Cross the Modi Khola, climb to Chhomrong",
+          "Last major village before the Sanctuary",
+          "Chhomrong \u2014 check permits here"
+        ],
+        "insider_tip": "Chhomrong has the best panorama of Annapurna South and Machhapuchhre (Fishtail) of the entire trek.",
+        "altitude_m": 2170
+      },
+      {
+        "day": 5,
+        "location": "Chhomrong \u2192 Dovan",
+        "title": "Into the gorge",
+        "bullets": [
+          "Descend to the Chhomrong Khola then climb steeply",
+          "Forest thickens \u2014 leeches in monsoon season",
+          "Cross bamboo bridges over multiple streams"
+        ],
+        "insider_tip": "Check leech conditions before you go. April-September means long trousers and salt in your pockets.",
+        "altitude_m": 2600
+      },
+      {
+        "day": 6,
+        "location": "Dovan \u2192 Machhapuchhre Base Camp",
+        "title": "The sacred mountain looms",
+        "bullets": [
+          "Trek through Himalaya Hotel and Hinku Cave",
+          "Machhapuchhre BC (3,700m) \u2014 first views of the Fishtail peak",
+          "Annapurna Base Camp visible ahead"
+        ],
+        "insider_tip": "Machhapuchhre (Fishtail) is the only peak in Nepal that has never been summited \u2014 it's considered the home of Shiva.",
+        "altitude_m": 3700
+      },
+      {
+        "day": 7,
+        "location": "Machhapuchhre BC \u2192 Annapurna BC",
+        "title": "The Sanctuary",
+        "bullets": [
+          "2h walk into the glacial sanctuary bowl",
+          "Surrounded on all sides by 7,000-8,000m peaks",
+          "Annapurna I South Face looms directly overhead"
+        ],
+        "insider_tip": "Arrive at ABC before 10am \u2014 clouds build fast and obscure the mountains by midday. Sunrise from ABC is extraordinary.",
+        "altitude_m": 4130
+      },
+      {
+        "day": 8,
+        "location": "Annapurna BC \u2192 Bamboo",
+        "title": "Long descent",
+        "bullets": [
+          "Retrace down through the Sanctuary and gorge",
+          "Descent is much faster \u2014 knees will feel it",
+          "Rest in Bamboo"
+        ],
+        "insider_tip": "On the way down you notice things you missed going up \u2014 the bird diversity in the lower forest is exceptional.",
+        "altitude_m": 2340
+      },
+      {
+        "day": 9,
+        "location": "Bamboo \u2192 Nayapul \u2192 Pokhara",
+        "title": "Out and celebrate",
+        "bullets": [
+          "Trek out to Nayapul via Jhinu hot springs (optional 2h detour)",
+          "Drive back to Pokhara",
+          "Lakeside dinner to celebrate"
+        ],
+        "insider_tip": "The Jhinu hot springs are a 30-minute detour from the main trail on day 9. Worth every minute after 8 days of trekking.",
+        "altitude_m": 820
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 862,
+    "price_to_traveler": 1840,
+    "image": "assets/images/hero-annapurna.png",
+    "has_real_photo": false
+  },
+  {
+    "title": "Poon Hill Trek",
+    "slug": "poon-hill",
+    "description": "Nepal's most popular short trek. Four days through Gurung villages and rhododendron forests to Poon Hill (3,210m) \u2014 a panoramic sunrise viewpoint of the entire Dhaulagiri and Annapurna ranges. Perfect first trek.",
+    "duration_days": 4,
+    "difficulty": "easy",
+    "price_from_usd": 350,
+    "price_to_usd": 800,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "short-trek",
+      "sunrise",
+      "annapurna",
+      "beginner-friendly",
+      "ghorepani"
+    ],
+    "best_seasons": [
+      "February",
+      "March",
+      "April",
+      "October",
+      "November",
+      "December"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 4,
+    "days": [
+      {
+        "day": 1,
+        "location": "Pokhara \u2192 Nayapul \u2192 Tikhedunga",
+        "title": "Drive and first steps",
+        "bullets": [
+          "1.5h drive from Pokhara to Nayapul",
+          "Trek 3h to Tikhedunga through villages",
+          "First mountain views on clear days"
+        ],
+        "insider_tip": "Leave Pokhara by 8am to arrive in Tikhedunga with time for a proper lunch.",
+        "altitude_m": 1540
+      },
+      {
+        "day": 2,
+        "location": "Tikhedunga \u2192 Ghorepani",
+        "title": "The famous stone staircase",
+        "bullets": [
+          "3,500 stone steps to Ulleri \u2014 the hardest section",
+          "Rhododendron forest above Ulleri (stunning March-April)",
+          "Ghorepani village \u2014 comfortable lodges, hot showers"
+        ],
+        "insider_tip": "Count the steps if you need something to focus on. Most people make it in 4h at a moderate pace.",
+        "altitude_m": 2860
+      },
+      {
+        "day": 3,
+        "location": "Ghorepani \u2192 Poon Hill \u2192 Tadapani",
+        "title": "The sunrise you came for",
+        "bullets": [
+          "4:30am start, 45min climb to Poon Hill (3,210m)",
+          "Dhaulagiri (8,167m), Annapurna I (8,091m), Machhapuchhre in alpenglow",
+          "Ridge walk through old-growth rhododendron trees to Tadapani"
+        ],
+        "insider_tip": "Poon Hill has 50+ people at sunrise in peak season. Position yourself on the left side of the viewing platform for the best Dhaulagiri angle.",
+        "altitude_m": 3210
+      },
+      {
+        "day": 4,
+        "location": "Tadapani \u2192 Ghandruk \u2192 Nayapul \u2192 Pokhara",
+        "title": "Gurung village and out",
+        "bullets": [
+          "Descent to Ghandruk \u2014 one of Nepal's most beautiful Gurung villages",
+          "Ghandruk Museum \u2014 Gurung culture and history",
+          "Jeep out from Kimchi or trek to Nayapul"
+        ],
+        "insider_tip": "Ghandruk has a small museum run by local women's cooperatives. Buy a pashmina here \u2014 the money goes directly to the village.",
+        "altitude_m": 1940
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 402,
+    "price_to_traveler": 920,
+    "image": "assets/images/hero-annapurna.png",
+    "has_real_photo": false
+  },
+  {
+    "title": "Langtang Valley Trek",
+    "slug": "langtang-valley",
+    "description": "Closest major trek to Kathmandu. 8 days through the Langtang National Park to the high-altitude cheese factories and Kyanjin Gompa beneath the 7,227m Langtang Lirung. Uncrowded compared to Annapurna and Everest.",
+    "duration_days": 8,
+    "difficulty": "moderate",
+    "price_from_usd": 650,
+    "price_to_usd": 1400,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "langtang",
+      "close-to-kathmandu",
+      "cheese",
+      "less-crowded"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 5,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Syabrubesi",
+        "title": "Drive to trailhead",
+        "bullets": [
+          "7h drive from Kathmandu through scenic hills",
+          "Syabrubesi \u2014 entry point to Langtang",
+          "Evening walk around village"
+        ],
+        "insider_tip": "The road to Syabrubesi is rough after Dhunche. Take the morning bus and bring motion sickness tablets.",
+        "altitude_m": 1460
+      },
+      {
+        "day": 2,
+        "location": "Syabrubesi \u2192 Lama Hotel",
+        "title": "Forest ascent",
+        "bullets": [
+          "Trek through subtropical and temperate forest",
+          "Langtang river accompanies you all day",
+          "Lama Hotel \u2014 basic but comfortable"
+        ],
+        "insider_tip": "The Langtang river is crystal clear \u2014 you can drink it directly above Syabrubesi. Below it's compromised.",
+        "altitude_m": 2480
+      },
+      {
+        "day": 3,
+        "location": "Lama Hotel \u2192 Langtang Village",
+        "title": "Enter the high valley",
+        "bullets": [
+          "Forest gives way to open valley with Himalayan views",
+          "Pass the memorial to the 2015 earthquake victims",
+          "Langtang village \u2014 rebuilt after the avalanche"
+        ],
+        "insider_tip": "The 2015 earthquake and avalanche destroyed the original Langtang village. The rebuilt village is a testament to community resilience.",
+        "altitude_m": 3430
+      },
+      {
+        "day": 4,
+        "location": "Langtang \u2192 Kyanjin Gompa",
+        "title": "The cheese factory",
+        "bullets": [
+          "Short trek to Kyanjin Gompa (3,870m)",
+          "Visit the government-run yak cheese factory",
+          "Kyanjin Ri hike for afternoon views"
+        ],
+        "insider_tip": "The Langtang cheese is famous \u2014 buy a whole wheel. They vacuum-pack it for travel.",
+        "altitude_m": 3870
+      },
+      {
+        "day": 5,
+        "location": "Kyanjin Gompa",
+        "title": "High point \u2014 Tsergo Ri",
+        "bullets": [
+          "Climb to Tsergo Ri (4,984m) for panoramic views of Langtang Lirung and the glacier",
+          "Return to Kyanjin for the night",
+          "Full day above 4,000m"
+        ],
+        "insider_tip": "Tsergo Ri is not technically difficult but the altitude makes it feel like Everest. Start at 6am.",
+        "altitude_m": 4984
+      },
+      {
+        "day": 6,
+        "location": "Kyanjin \u2192 Lama Hotel",
+        "title": "Begin descent",
+        "bullets": [
+          "Same trail back but different light",
+          "Faster descent \u2014 many do in 5h",
+          "Lama Hotel feels luxurious compared to Kyanjin"
+        ],
+        "insider_tip": "On the descent you'll see the valley from different angles. The forest section is quieter and you'll spot more wildlife.",
+        "altitude_m": 2480
+      },
+      {
+        "day": 7,
+        "location": "Lama Hotel \u2192 Syabrubesi",
+        "title": "Final trail day",
+        "bullets": [
+          "Last forest section back to Syabrubesi",
+          "Hot springs optional detour (Tatopani, 1h off route)",
+          "Evening in Syabrubesi"
+        ],
+        "insider_tip": "The Syabrubesi hot spring is 20min from the village \u2014 a perfect end-of-trek soak.",
+        "altitude_m": 1460
+      },
+      {
+        "day": 8,
+        "location": "Syabrubesi \u2192 Kathmandu",
+        "title": "Drive back",
+        "bullets": [
+          "7h drive back to Kathmandu",
+          "Arrive in time for dinner in Thamel",
+          "Debrief with guide over dal bhat"
+        ],
+        "insider_tip": "The drive back passes through Dhunche where you can see Ganesh Himal and Langtang Lirung from the road.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 747,
+    "price_to_traveler": 1610,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Kathmandu Valley Heritage Trail",
+    "slug": "kathmandu-valley-heritage",
+    "description": "Four UNESCO World Heritage Sites in four days. Walk between ancient Newari cities, Hindu temples, Buddhist stupas, and living goddesses. No altitude, no trekking \u2014 pure culture.",
+    "duration_days": 4,
+    "difficulty": "easy",
+    "price_from_usd": 300,
+    "price_to_usd": 700,
+    "focus": [
+      "culture"
+    ],
+    "tags": [
+      "culture",
+      "heritage",
+      "kathmandu",
+      "temples",
+      "buddhism",
+      "hinduism",
+      "urban"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "February",
+      "March",
+      "April"
+    ],
+    "hero_image_url": "/images/kathmandu-boudhanath-stupa.png",
+    "popularity_rank": 6,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu",
+        "title": "Boudhanath and Pashupatinath",
+        "bullets": [
+          "Boudhanath Stupa \u2014 one of the world's largest Buddhist stupas",
+          "Pashupatinath temple \u2014 holiest Hindu site in Nepal (riverside cremation ghats)",
+          "Thamel evening walk"
+        ],
+        "insider_tip": "Pashupatinath is most vivid at dawn (5-7am) when the cremation ceremonies take place. Respectful observation from the far bank is welcome.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 2,
+        "location": "Bhaktapur",
+        "title": "The medieval city",
+        "bullets": [
+          "Bhaktapur Durbar Square \u2014 the best-preserved medieval city in Asia",
+          "Pottery Square \u2014 potters still using 500-year-old wheels",
+          "Nyatapola Temple \u2014 the tallest pagoda in Nepal",
+          "55-Window Palace"
+        ],
+        "insider_tip": "Bhaktapur charges a separate entry fee. Stay overnight to see it in the morning before the day-trippers arrive \u2014 it's magical.",
+        "altitude_m": 1401
+      },
+      {
+        "day": 3,
+        "location": "Patan",
+        "title": "The city of fine arts",
+        "bullets": [
+          "Patan Durbar Square \u2014 finest example of Newari architecture",
+          "Patan Museum \u2014 best museum in Nepal",
+          "Krishna Mandir and the golden window",
+          "Traditional craftsmen's quarter"
+        ],
+        "insider_tip": "The Patan Museum has the best collection of Hindu and Buddhist bronzes outside of the British Museum. Give it 2 hours.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 4,
+        "location": "Swayambhunath + Changu Narayan",
+        "title": "Monkey temple and the oldest shrine",
+        "bullets": [
+          "Swayambhunath (Monkey Temple) \u2014 hilltop stupa with panoramic valley views",
+          "Changu Narayan \u2014 oldest temple in the valley (4th century)",
+          "Return to Kathmandu for farewell dinner"
+        ],
+        "insider_tip": "Swayambhunath at sunrise (6am) has almost no tourists and extraordinary light. The monkeys are less active and more photogenic.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "cultural",
+    "price_from_traveler": 342,
+    "price_to_traveler": 798,
+    "image": "assets/images/kathmandu-boudhanath-stupa.png",
+    "has_real_photo": true
+  },
+  {
+    "title": "Classic Nepal \u2014 Kathmandu, Chitwan & Pokhara",
+    "slug": "classic-nepal",
+    "description": "The iconic 10-day triangle covering Nepal's three must-sees: the ancient temples of Kathmandu, jungle safari in Chitwan, and the lakeside city of Pokhara with Annapurna views. Nepal's most booked itinerary.",
+    "duration_days": 10,
+    "difficulty": "easy",
+    "price_from_usd": 900,
+    "price_to_usd": 2200,
+    "focus": [
+      "mixed",
+      "culture",
+      "wildlife"
+    ],
+    "tags": [
+      "classic",
+      "culture",
+      "wildlife",
+      "pokhara",
+      "kathmandu",
+      "chitwan",
+      "tiger",
+      "rhino"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "February",
+      "March",
+      "April"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 7,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu",
+        "title": "Arrive, Thamel, Boudhanath",
+        "bullets": [
+          "Arrive TIA, transfer to hotel",
+          "Boudhanath stupa evening walk",
+          "Thamel dinner and rest"
+        ],
+        "insider_tip": "Boudhanath at dusk when monks circle the stupa with butter lamps is one of the most peaceful scenes in Nepal.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 2,
+        "location": "Kathmandu",
+        "title": "Durbar Squares",
+        "bullets": [
+          "Pashupatinath temple morning visit",
+          "Kathmandu Durbar Square and Kumari courtyard (living goddess)",
+          "Swayambhunath at sunset"
+        ],
+        "insider_tip": "The Kumari (living goddess) appears at her window daily at certain times. Ask your guide for today's schedule.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 3,
+        "location": "Kathmandu \u2192 Bhaktapur \u2192 Chitwan",
+        "title": "Medieval city then jungle drive",
+        "bullets": [
+          "Morning in Bhaktapur \u2014 medieval Newari architecture",
+          "Afternoon drive to Chitwan (4-5h) or short domestic flight",
+          "Jungle resort arrival and briefing"
+        ],
+        "insider_tip": "The drive to Chitwan via Prithvi Highway passes through stunning Trisuli River gorge. Sit on the left side of the bus.",
+        "altitude_m": 200
+      },
+      {
+        "day": 4,
+        "location": "Chitwan",
+        "title": "Jeep safari and jungle walk",
+        "bullets": [
+          "6am jeep safari \u2014 best tiger and one-horned rhino sightings at dawn",
+          "Guided jungle walk \u2014 spot sloth bears, deer, crocodiles",
+          "Elephant interaction (ethical \u2014 no rides, observe in natural habitat)"
+        ],
+        "insider_tip": "Dawn jeep safari is always better than evening. Predators hunt at first light. Book with a guide who knows the park's northern grasslands.",
+        "altitude_m": 200
+      },
+      {
+        "day": 5,
+        "location": "Chitwan",
+        "title": "Canoe and village",
+        "bullets": [
+          "Dugout canoe down the Rapti river \u2014 gharial crocodiles sunbathing on banks",
+          "Tharu cultural village tour and stick dance performance",
+          "Bird watching \u2014 543 species recorded in the park"
+        ],
+        "insider_tip": "The Rapti canoe trip is the most underrated activity in Chitwan. 10 minutes in, you'll see gharials closer than you imagined possible.",
+        "altitude_m": 200
+      },
+      {
+        "day": 6,
+        "location": "Chitwan \u2192 Pokhara",
+        "title": "Travel to the lakeside city",
+        "bullets": [
+          "Morning drive or flight to Pokhara",
+          "Check in to lakeside hotel",
+          "Sunset walk along Phewa Lake"
+        ],
+        "insider_tip": "The drive Chitwan \u2192 Pokhara via the Prithvi Highway is genuinely beautiful. If the weather is clear, you'll see the Annapurna range for the last hour.",
+        "altitude_m": 820
+      },
+      {
+        "day": 7,
+        "location": "Pokhara",
+        "title": "Sarangkot sunrise, lake day",
+        "bullets": [
+          "4:30am drive to Sarangkot (1,592m) \u2014 Annapurna and Dhaulagiri sunrise panorama",
+          "Phewa Lake boat trip to Tal Barahi island temple",
+          "Lakeside afternoon at leisure"
+        ],
+        "insider_tip": "Sarangkot sunrise is Pokhara's equivalent of Poon Hill \u2014 and easier to access. Book a taxi the night before.",
+        "altitude_m": 820
+      },
+      {
+        "day": 8,
+        "location": "Pokhara",
+        "title": "Paragliding, caves, museum",
+        "bullets": [
+          "Paragliding over Pokhara with Annapurna as backdrop (40min flight)",
+          "Mahendra Cave and Bat Cave",
+          "International Mountain Museum"
+        ],
+        "insider_tip": "Pokhara paragliding is the most popular in Asia. Book with Blue Sky Paragliding \u2014 they're Nepal's most established operator.",
+        "altitude_m": 820
+      },
+      {
+        "day": 9,
+        "location": "Pokhara \u2192 Kathmandu",
+        "title": "Return and farewell dinner",
+        "bullets": [
+          "25-min flight back to Kathmandu (stunning mountain views on clear days)",
+          "Last shopping in Thamel",
+          "Farewell dinner at a rooftop restaurant"
+        ],
+        "insider_tip": "Book the afternoon flight KTM\u2192Pokhara for mountain views \u2014 and sit on the left side going, right side returning.",
+        "altitude_m": 1400
+      },
+      {
+        "day": 10,
+        "location": "Kathmandu",
+        "title": "Depart",
+        "bullets": [
+          "Last morning at leisure",
+          "Transfer to TIA",
+          "Depart Nepal"
+        ],
+        "insider_tip": "Arrive at TIA 3 hours before international flights \u2014 security queues can be unpredictable.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "wildlife",
+    "price_from_traveler": 1013,
+    "price_to_traveler": 2475,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Chitwan National Park Safari",
+    "slug": "chitwan-safari",
+    "description": "Three focused days in one of Asia's best wildlife parks. One-horned rhinoceros, Bengal tigers, gharial crocodiles, and 543 bird species in the Terai jungle. UNESCO World Heritage Site.",
+    "duration_days": 3,
+    "difficulty": "easy",
+    "price_from_usd": 400,
+    "price_to_usd": 1000,
+    "focus": [
+      "wildlife"
+    ],
+    "tags": [
+      "safari",
+      "wildlife",
+      "chitwan",
+      "tiger",
+      "rhino",
+      "jungle",
+      "UNESCO"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March",
+      "April"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 8,
+    "days": [
+      {
+        "day": 1,
+        "location": "Chitwan",
+        "title": "Arrive, afternoon canoe & village",
+        "bullets": [
+          "Transfer from Kathmandu or Pokhara",
+          "Dugout canoe on the Rapti River \u2014 gharial and mugger crocodiles",
+          "Tharu village walk and cultural show"
+        ],
+        "insider_tip": "Check in to your jungle lodge by 2pm to catch the afternoon canoe. The activity timing is tightly scheduled.",
+        "altitude_m": 200
+      },
+      {
+        "day": 2,
+        "location": "Chitwan",
+        "title": "Full safari day",
+        "bullets": [
+          "5:30am jeep safari \u2014 peak tiger and rhino activity",
+          "Guided jungle walk with armed ranger",
+          "Elephant observation at sunrise (not rides \u2014 ethical interaction)"
+        ],
+        "insider_tip": "Tiger sightings average 1 per 4 safari days. Don't be disappointed if you don't see one \u2014 a single rhino encounter at dawn is just as profound.",
+        "altitude_m": 200
+      },
+      {
+        "day": 3,
+        "location": "Chitwan \u2192 Kathmandu",
+        "title": "Morning safari, depart",
+        "bullets": [
+          "One final dawn jeep safari",
+          "Brunch at the lodge",
+          "Transfer back to Kathmandu or Pokhara"
+        ],
+        "insider_tip": "The last morning safari often has the best sightings \u2014 guides know the animal patterns and route accordingly.",
+        "altitude_m": 200
+      }
+    ],
+    "markup_category": "wildlife",
+    "price_from_traveler": 450,
+    "price_to_traveler": 1125,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Bardia National Park \u2014 Remote Safari",
+    "slug": "bardia-safari",
+    "description": "Nepal's largest national park and its best-kept secret. Far fewer tourists than Chitwan, with some of Asia's highest tiger and elephant densities. A genuine wilderness experience.",
+    "duration_days": 5,
+    "difficulty": "easy",
+    "price_from_usd": 600,
+    "price_to_usd": 1400,
+    "focus": [
+      "wildlife"
+    ],
+    "tags": [
+      "safari",
+      "wildlife",
+      "bardia",
+      "remote",
+      "tiger",
+      "elephant",
+      "uncrowded"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 12,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Nepalgunj \u2192 Bardia",
+        "title": "Fly west, enter the jungle",
+        "bullets": [
+          "Morning domestic flight to Nepalgunj (1.5h)",
+          "Drive 3h to Bardia \u2014 virtually no tourists in sight",
+          "Evening briefing and orientation walk"
+        ],
+        "insider_tip": "Bardia sees 5% of the visitors Chitwan does. The experience is raw and real.",
+        "altitude_m": 155
+      },
+      {
+        "day": 2,
+        "location": "Bardia",
+        "title": "Karnali river safari",
+        "bullets": [
+          "Dawn boat safari on the Karnali river",
+          "Gangetic dolphins, gharials, and marsh mugger crocodiles",
+          "Afternoon jungle walk in the core zone"
+        ],
+        "insider_tip": "The Gangetic river dolphin is critically endangered. Bardia's Karnali river has one of the healthiest populations left on earth.",
+        "altitude_m": 155
+      },
+      {
+        "day": 3,
+        "location": "Bardia",
+        "title": "Deep jungle \u2014 tiger territory",
+        "bullets": [
+          "Full-day tracked walking safari in core tiger zone",
+          "Armed ranger with decades of tracking experience",
+          "Nilgai antelope, spotted deer, wild boar sightings guaranteed"
+        ],
+        "insider_tip": "Walking safaris in Bardia bring you far closer to wildlife than vehicles. The ranger reads pugmarks and broken grass \u2014 stay close and quiet.",
+        "altitude_m": 155
+      },
+      {
+        "day": 4,
+        "location": "Bardia",
+        "title": "Wild elephant tracking",
+        "bullets": [
+          "Track wild Asian elephant herds in the flood plain",
+          "Tharu village cultural immersion \u2014 traditional meal",
+          "Night safari by boat"
+        ],
+        "insider_tip": "Bardia has over 100 wild elephants. Unlike Chitwan, these are genuinely wild \u2014 encounters are on their terms.",
+        "altitude_m": 155
+      },
+      {
+        "day": 5,
+        "location": "Bardia \u2192 Nepalgunj \u2192 Kathmandu",
+        "title": "Final dawn, fly home",
+        "bullets": [
+          "Last dawn safari",
+          "Drive to Nepalgunj",
+          "Afternoon flight back to Kathmandu"
+        ],
+        "insider_tip": "The flight Nepalgunj-KTM on clear days reveals the entire Dhaulagiri-Annapurna-Ganesh Himal-Langtang range. Window seat on the right.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "wildlife",
+    "price_from_traveler": 675,
+    "price_to_traveler": 1575,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Muktinath Pilgrimage",
+    "slug": "muktinath-pilgrimage",
+    "description": "One of the holiest sites in Asia \u2014 sacred to both Hindus and Buddhists. Drive through the world's deepest gorge, fly to Jomsom, and trek to the Muktinath temple at 3,800m in the high Mustang desert.",
+    "duration_days": 7,
+    "difficulty": "moderate",
+    "price_from_usd": 700,
+    "price_to_usd": 1500,
+    "focus": [
+      "spiritual"
+    ],
+    "tags": [
+      "pilgrimage",
+      "spiritual",
+      "muktinath",
+      "mustang",
+      "buddhism",
+      "hinduism",
+      "high-altitude"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "September",
+      "October"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 10,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Pokhara",
+        "title": "Fly to the lake city",
+        "bullets": [
+          "25-min flight from KTM to Pokhara",
+          "Lakeside afternoon",
+          "Prepare for early morning Jomsom flight"
+        ],
+        "insider_tip": "The Jomsom flight is one of the most dramatic in the world. Confirm your booking the evening before.",
+        "altitude_m": 820
+      },
+      {
+        "day": 2,
+        "location": "Pokhara \u2192 Jomsom \u2192 Kagbeni",
+        "title": "Fly into the Mustang",
+        "bullets": [
+          "6am Jomsom flight through the Kali Gandaki gorge \u2014 world's deepest",
+          "Jomsom \u2014 border town at the edge of restricted Mustang",
+          "Trek 2h to Kagbeni \u2014 gateway to Upper Mustang"
+        ],
+        "insider_tip": "The Jomsom flight window is 6-8am only. After 9am, channel winds make the approach impossible.",
+        "altitude_m": 2810
+      },
+      {
+        "day": 3,
+        "location": "Kagbeni \u2192 Muktinath",
+        "title": "The sacred ascent",
+        "bullets": [
+          "Trek 3h uphill through ochre desert and mani walls",
+          "Muktinath temple complex at 3,800m",
+          "108 water spouts ritual bathing and flame temple"
+        ],
+        "insider_tip": "The 108 water spouts at Muktinath are glacially cold. Devout pilgrims bathe under all 108. Most tourists do 1.",
+        "altitude_m": 3800
+      },
+      {
+        "day": 4,
+        "location": "Muktinath",
+        "title": "Deeper pilgrimage",
+        "bullets": [
+          "Jwala Mai \u2014 the eternal flame temple fed by natural gas seeps",
+          "Visit Guru Rinpoche cave monastery above the main temple",
+          "Buddhist and Hindu ritual ceremonies"
+        ],
+        "insider_tip": "Muktinath is one of the 108 Vishnu temples (Divya Desams). The flame that burns on water is considered a miracle in both Hindu and Buddhist traditions.",
+        "altitude_m": 3800
+      },
+      {
+        "day": 5,
+        "location": "Muktinath \u2192 Marpha",
+        "title": "Descent through apple country",
+        "bullets": [
+          "Trek down through Jharkot and Khinga villages",
+          "Marpha \u2014 the apple brandy capital of Nepal",
+          "Sample local produce and visit the monastery"
+        ],
+        "insider_tip": "Marpha's apple orchards produce Nepal's most famous raksi (spirits). The local cooperative sells directly.",
+        "altitude_m": 2670
+      },
+      {
+        "day": 6,
+        "location": "Marpha \u2192 Jomsom",
+        "title": "Final night at 2,720m",
+        "bullets": [
+          "Short pleasant trek along the Kali Gandaki",
+          "Jomsom evening \u2014 explore the military town",
+          "Confirm morning flight"
+        ],
+        "insider_tip": "Jomsom's Nilgiri Hotel has the best views of the surrounding peaks. Book well in advance.",
+        "altitude_m": 2720
+      },
+      {
+        "day": 7,
+        "location": "Jomsom \u2192 Pokhara \u2192 Kathmandu",
+        "title": "Fly back, reflect",
+        "bullets": [
+          "Morning Jomsom-Pokhara flight",
+          "Connecting KTM flight or overnight in Pokhara",
+          "Debrief and depart"
+        ],
+        "insider_tip": "The Jomsom to Pokhara flight takes 20 minutes but covers terrain that took 5 days to walk. The juxtaposition is extraordinary.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "cultural",
+    "price_from_traveler": 798,
+    "price_to_traveler": 1710,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Gosaikunda Sacred Lakes Trek",
+    "slug": "gosaikunda",
+    "description": "A high-altitude pilgrimage trail to the sacred Gosaikunda lakes (4,380m) \u2014 the source of the Bagmati river and home to Lord Shiva. Combines the Helambu region's Hyolmo culture with Tamang heritage.",
+    "duration_days": 7,
+    "difficulty": "moderate",
+    "price_from_usd": 500,
+    "price_to_usd": 1100,
+    "focus": [
+      "spiritual",
+      "adventure"
+    ],
+    "tags": [
+      "pilgrimage",
+      "lakes",
+      "gosaikunda",
+      "shiva",
+      "spiritual",
+      "langtang"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 11,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Sundarijal",
+        "title": "Edge of the city, into the forest",
+        "bullets": [
+          "Drive to Sundarijal (1,460m) \u2014 start of the Shivapuri ridge",
+          "Trek through Shivapuri National Park",
+          "Night in Chisapani with valley views"
+        ],
+        "insider_tip": "Sundarijal is at the edge of Kathmandu \u2014 it's surreal how quickly the city disappears into the forest.",
+        "altitude_m": 2215
+      },
+      {
+        "day": 2,
+        "location": "Chisapani \u2192 Kutumsang",
+        "title": "Ridge walk",
+        "bullets": [
+          "Long ridge walk through Helambu forests",
+          "Hyolmo villages with Tibetan-influenced culture",
+          "Panoramic views of Langtang and Ganesh Himal"
+        ],
+        "insider_tip": "The Helambu region is largely unknown to trekkers. You'll walk most days without seeing another foreigner.",
+        "altitude_m": 2470
+      },
+      {
+        "day": 3,
+        "location": "Kutumsang \u2192 Tharepati",
+        "title": "Forest and altitude",
+        "bullets": [
+          "Climb through rhododendron forest",
+          "Tharepati (3,490m) \u2014 junction for Gosaikunda and Helambu trails",
+          "First views of distant Himalayan peaks"
+        ],
+        "insider_tip": "At Tharepati, the trail splits. Keep to the Gosaikunda branch \u2014 it's less-walked and the views open dramatically.",
+        "altitude_m": 3490
+      },
+      {
+        "day": 4,
+        "location": "Tharepati \u2192 Ghopte",
+        "title": "High country",
+        "bullets": [
+          "Traverse high ridges above 3,000m",
+          "Tin-roofed teahouses in remote meadows",
+          "Views of the Jugal and Rolwaling ranges"
+        ],
+        "insider_tip": "Very few trekkers on this section. You may have the trail to yourself. It's the real Nepal.",
+        "altitude_m": 3430
+      },
+      {
+        "day": 5,
+        "location": "Ghopte \u2192 Gosaikunda",
+        "title": "The sacred lake",
+        "bullets": [
+          "Climb to Gosaikunda (4,380m) \u2014 first views of the sacred lakes",
+          "Main lake and three smaller satellite lakes",
+          "Hindu ritual at lakeside shrine"
+        ],
+        "insider_tip": "At the full moon in July-August, over 50,000 Hindu pilgrims walk here for the Janai Purnima festival. At any other time you may be alone with the lake.",
+        "altitude_m": 4380
+      },
+      {
+        "day": 6,
+        "location": "Gosaikunda \u2192 Dhunche",
+        "title": "Steep descent",
+        "bullets": [
+          "Long steep descent to Sing Gompa (cheese factory)",
+          "Continue down to Dhunche \u2014 regional hub",
+          "Hot meal and rest"
+        ],
+        "insider_tip": "Sing Gompa's yak cheese factory makes excellent cheese. It's the same production as the Langtang factory \u2014 same government operation.",
+        "altitude_m": 1982
+      },
+      {
+        "day": 7,
+        "location": "Dhunche \u2192 Kathmandu",
+        "title": "Drive home",
+        "bullets": [
+          "4h drive back to Kathmandu on the Trishuli highway",
+          "Pass through Trishuli Bazar \u2014 river rafting hub",
+          "Return to Kathmandu by afternoon"
+        ],
+        "insider_tip": "The drive back follows the Trishuli river. In spring you'll see dozens of rafting groups on the rapids below.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 575,
+    "price_to_traveler": 1265,
+    "image": "assets/images/hero-annapurna.png",
+    "has_real_photo": false
+  },
+  {
+    "title": "Pokhara Wellness & Yoga Retreat",
+    "slug": "pokhara-wellness",
+    "description": "Five restorative days in the lakeside city of Pokhara \u2014 Nepal's wellness capital. Yoga at sunrise with Annapurna views, Ayurvedic treatments, meditation sessions, and gentle nature walks.",
+    "duration_days": 5,
+    "difficulty": "easy",
+    "price_from_usd": 500,
+    "price_to_usd": 1800,
+    "focus": [
+      "wellness"
+    ],
+    "tags": [
+      "wellness",
+      "yoga",
+      "pokhara",
+      "meditation",
+      "ayurveda",
+      "lakeside",
+      "relaxation"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "February",
+      "March",
+      "April"
+    ],
+    "hero_image_url": "/images/pokhara-phewa-lake.png",
+    "popularity_rank": 14,
+    "days": [
+      {
+        "day": 1,
+        "location": "Pokhara",
+        "title": "Arrive and settle",
+        "bullets": [
+          "Fly from Kathmandu (25min) or drive (6-7h)",
+          "Check in to retreat centre or lakeside hotel",
+          "Orientation walk along Phewa Lake at sunset"
+        ],
+        "insider_tip": "The best wellness retreats in Pokhara are on the quieter southern end of the lake, away from the tourist strip.",
+        "altitude_m": 820
+      },
+      {
+        "day": 2,
+        "location": "Pokhara",
+        "title": "Sunrise yoga, Annapurna morning",
+        "bullets": [
+          "6am sunrise yoga session \u2014 Dhaulagiri and Annapurna in full view",
+          "Breakfast on the lakeside",
+          "Sarangkot morning hike for mountain panorama"
+        ],
+        "insider_tip": "Morning yoga on a rooftop with the Annapurna range is the defining Pokhara experience. Book a retreat that specifically offers this.",
+        "altitude_m": 820
+      },
+      {
+        "day": 3,
+        "location": "Pokhara",
+        "title": "Ayurveda and meditation",
+        "bullets": [
+          "Ayurvedic consultation and 3h treatment programme",
+          "Afternoon meditation session",
+          "Phewa Lake boat ride \u2014 island temple"
+        ],
+        "insider_tip": "Pokhara has some of Nepal's best Ayurvedic practitioners. A proper 3h treatment with panchakarma is significantly cheaper here than India.",
+        "altitude_m": 820
+      },
+      {
+        "day": 4,
+        "location": "Pokhara",
+        "title": "Nature walk \u2014 World Peace Stupa",
+        "bullets": [
+          "Morning walk to the World Peace Stupa (1,100m) above the lake",
+          "Japanese-funded stupa with stunning views of Pokhara and Annapurna",
+          "Afternoon free \u2014 kayaking, swimming, reading"
+        ],
+        "insider_tip": "The walk to the Peace Stupa takes 90 minutes from the lakeside. Go early \u2014 the light on Machhapuchhre (Fishtail) is best before 10am.",
+        "altitude_m": 820
+      },
+      {
+        "day": 5,
+        "location": "Pokhara \u2192 Kathmandu",
+        "title": "Final morning practice, depart",
+        "bullets": [
+          "Last morning yoga and meditation",
+          "Lakeside walk and final Himalayan views",
+          "Flight or drive back to Kathmandu"
+        ],
+        "insider_tip": "Leave Pokhara with the mental clarity you came for. Many visitors return every year.",
+        "altitude_m": 820
+      }
+    ],
+    "markup_category": "default",
+    "price_from_traveler": 568,
+    "price_to_traveler": 2043,
+    "image": "assets/images/pokhara-phewa-lake.png",
+    "has_real_photo": true
+  },
+  {
+    "title": "Manaslu Circuit",
+    "slug": "manaslu-circuit",
+    "description": "The best off-the-beaten-path alternative to the Annapurna Circuit. 16 days crossing the Larkya La pass (5,160m) around the world's 8th highest mountain through Tibetan-influenced Nubri villages. Requires restricted area permit.",
+    "duration_days": 16,
+    "difficulty": "challenging",
+    "price_from_usd": 1400,
+    "price_to_usd": 3000,
+    "focus": [
+      "adventure"
+    ],
+    "tags": [
+      "trekking",
+      "manaslu",
+      "restricted",
+      "larkya-la",
+      "remote",
+      "permit-required",
+      "off-beaten-path"
+    ],
+    "best_seasons": [
+      "March",
+      "April",
+      "May",
+      "October",
+      "November"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 9,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Arughat",
+        "title": "Drive to trailhead",
+        "bullets": [
+          "7h drive to Arughat Bazar (460m)",
+          "Gorkha district \u2014 birthplace of Nepal's unification",
+          "Permit check at the entry checkpoint"
+        ],
+        "insider_tip": "Manaslu requires a restricted area permit ($100/week) AND a registered guide \u2014 non-negotiable. Solo trekking is not permitted.",
+        "altitude_m": 460
+      },
+      {
+        "day": 2,
+        "location": "Arughat \u2192 Soti Khola",
+        "title": "Into the gorge",
+        "bullets": [
+          "Trek through subtropical forest",
+          "Budhi Gandaki river gorge narrowing",
+          "First villages of the Manaslu conservation area"
+        ],
+        "insider_tip": "The lower gorge feels oppressively narrow. By day 4 it opens to reveal the reason you came: the Manaslu massif.",
+        "altitude_m": 700
+      },
+      {
+        "day": 3,
+        "location": "Soti Khola \u2192 Machha Khola",
+        "title": "Waterfalls and suspension bridges",
+        "bullets": [
+          "Cross and re-cross the Budhi Gandaki river",
+          "Multiple waterfalls, leeches in wet season",
+          "Machha Khola \u2014 fish market village"
+        ],
+        "insider_tip": "The Manaslu trail has the highest density of suspension bridges of any Nepal trek \u2014 over 40 crossings.",
+        "altitude_m": 900
+      },
+      {
+        "day": 4,
+        "location": "Machha Khola \u2192 Dobhan",
+        "title": "Culture shifts",
+        "bullets": [
+          "Trek to Tatopani (hot springs)",
+          "Landscape shifts from tropical to temperate",
+          "First Tibetan prayer flags and mani walls appear"
+        ],
+        "insider_tip": "The Tatopani hot springs on this trail are natural and completely undeveloped \u2014 a pool by the river, no facilities.",
+        "altitude_m": 1070
+      },
+      {
+        "day": 5,
+        "location": "Dobhan \u2192 Deng",
+        "title": "Into Nubri",
+        "bullets": [
+          "Cross into the Nubri region \u2014 Tibetan Buddhist culture",
+          "Gho village \u2014 traditional stone houses",
+          "Views of Sringi Himal"
+        ],
+        "insider_tip": "From Deng onward you're in culturally Tibetan territory. The dialect, dress, and architecture shift noticeably.",
+        "altitude_m": 1804
+      },
+      {
+        "day": 6,
+        "location": "Deng \u2192 Ghap",
+        "title": "Climb steepens",
+        "bullets": [
+          "Steep trail through old-growth forest",
+          "Namrung village \u2014 large monastery",
+          "First views of Manaslu's northern face"
+        ],
+        "insider_tip": "The monastery in Namrung has murals dating to the 12th century. Your guide can arrange an entry \u2014 it's extraordinary.",
+        "altitude_m": 2300
+      },
+      {
+        "day": 7,
+        "location": "Ghap \u2192 Lho",
+        "title": "Manaslu reveals itself",
+        "bullets": [
+          "Lho village \u2014 first dramatic Manaslu (8,163m) view",
+          "Pungen Glacier viewpoint above the village",
+          "Tibetan-style houses with flat roofs"
+        ],
+        "insider_tip": "The view of Manaslu from Lho is arguably the finest mountain face view of any Nepal trek \u2014 bigger than Everest from Namche.",
+        "altitude_m": 3180
+      },
+      {
+        "day": 8,
+        "location": "Lho \u2192 Sama Gaon",
+        "title": "High plateau culture",
+        "bullets": [
+          "Trek through Shyala and into the Sama plateau",
+          "Sama Gaon (3,530m) \u2014 largest village on the route",
+          "Pungyen Gompa hike for glacier views"
+        ],
+        "insider_tip": "Sama Gaon has an excellent teahouse with a wood stove and real beds. It's as close to comfort as you'll get on this circuit.",
+        "altitude_m": 3530
+      },
+      {
+        "day": 9,
+        "location": "Sama Gaon",
+        "title": "Acclimatisation",
+        "bullets": [
+          "Hike to Manaslu Base Camp (4,480m) for close glacier views",
+          "Birendra Tal \u2014 turquoise lake at the foot of Manaslu",
+          "Afternoon rest and hydration"
+        ],
+        "insider_tip": "Manaslu Base Camp in spring has expedition teams preparing for the summit. The scale of the mountain from 4,480m is incomprehensible.",
+        "altitude_m": 4480
+      },
+      {
+        "day": 10,
+        "location": "Sama Gaon \u2192 Samdo",
+        "title": "High desert",
+        "bullets": [
+          "Short but high-altitude trek to Samdo (3,860m)",
+          "Tibetan refugee community and monastery",
+          "Last supply point before the pass"
+        ],
+        "insider_tip": "Stock up on snacks in Samdo \u2014 the teahouses beyond are basic. Energy bars and instant coffee are worth carrying.",
+        "altitude_m": 3860
+      },
+      {
+        "day": 11,
+        "location": "Samdo",
+        "title": "Acclimatise at Dharamsala",
+        "bullets": [
+          "Hike to Larkya La high camp (Dharamsala, 4,460m)",
+          "Return to Samdo for the night",
+          "Early to bed \u2014 3am start tomorrow"
+        ],
+        "insider_tip": "The Dharamsala shelter is very basic. Bring your sleeping bag and extra layers \u2014 it's -10\u00b0C before the pass.",
+        "altitude_m": 3860
+      },
+      {
+        "day": 12,
+        "location": "Samdo \u2192 Larkya La \u2192 Bimthang",
+        "title": "The great crossing",
+        "bullets": [
+          "3am start, 5h to Larkya La (5,160m)",
+          "360\u00b0 views of Manaslu, Cheo Himal, Himlung",
+          "Long 1,800m descent to Bimthang (3,720m)"
+        ],
+        "insider_tip": "The Larkya La is genuinely hard \u2014 wind, altitude, and a long technical descent combine. Go slow on the ascent and save energy for the descent.",
+        "altitude_m": 5160
+      },
+      {
+        "day": 13,
+        "location": "Bimthang \u2192 Tilije",
+        "title": "Descent through apple orchards",
+        "bullets": [
+          "Long descent to lower elevations",
+          "Apple orchards reappear",
+          "Annapurna II and IV visible to the south"
+        ],
+        "insider_tip": "After the cold and altitude, Tilije's apple orchards at 2,300m feel almost tropical.",
+        "altitude_m": 2300
+      },
+      {
+        "day": 14,
+        "location": "Tilije \u2192 Tal",
+        "title": "Canyon country",
+        "bullets": [
+          "Pass through Dharapani \u2014 connects to Annapurna Circuit",
+          "Kali Gandaki and Marshyangdi rivers join here",
+          "Tal waterfall"
+        ],
+        "insider_tip": "You're now at the junction with the Annapurna Circuit. Experienced trekkers sometimes combine both circuits \u2014 30+ days.",
+        "altitude_m": 1700
+      },
+      {
+        "day": 15,
+        "location": "Tal \u2192 Beshisahar",
+        "title": "Final trail day",
+        "bullets": [
+          "Descend the last section to the trailhead",
+          "Beshisahar \u2014 end of the circuit",
+          "Hot meal and debrief with your guide"
+        ],
+        "insider_tip": "The last day is long but downhill. You'll arrive in Beshisahar feeling like a different person than the one who started.",
+        "altitude_m": 760
+      },
+      {
+        "day": 16,
+        "location": "Beshisahar \u2192 Kathmandu",
+        "title": "Drive home",
+        "bullets": [
+          "5h drive back to Kathmandu",
+          "Hot shower, real bed, celebration dinner",
+          "Depart or extend"
+        ],
+        "insider_tip": "You've just done one of the world's great treks with a fraction of the crowds of EBC or Annapurna. That's the Manaslu reward.",
+        "altitude_m": 1400
+      }
+    ],
+    "markup_category": "trek",
+    "price_from_traveler": 1610,
+    "price_to_traveler": 3450,
+    "image": null,
+    "has_real_photo": false
+  },
+  {
+    "title": "Lumbini & Southern Nepal Heritage",
+    "slug": "lumbini-heritage",
+    "description": "The birthplace of Buddha and Nepal's most sacred cultural site. Three days in Lumbini's UNESCO sacred garden, ancient Ashokan pillar, and the international monastery zone with temples from 19 countries.",
+    "duration_days": 4,
+    "difficulty": "easy",
+    "price_from_usd": 400,
+    "price_to_usd": 900,
+    "focus": [
+      "spiritual",
+      "culture"
+    ],
+    "tags": [
+      "buddhism",
+      "lumbini",
+      "spiritual",
+      "unesco",
+      "pilgrimage",
+      "buddha",
+      "cultural"
+    ],
+    "best_seasons": [
+      "October",
+      "November",
+      "December",
+      "January",
+      "February",
+      "March"
+    ],
+    "hero_image_url": null,
+    "popularity_rank": 13,
+    "days": [
+      {
+        "day": 1,
+        "location": "Kathmandu \u2192 Lumbini",
+        "title": "Fly to the birthplace of Buddha",
+        "bullets": [
+          "1h flight to Bhairahawa, then 30min drive to Lumbini",
+          "Check in to guesthouse or monastery accommodation",
+          "Evening walk in the Sacred Garden"
+        ],
+        "insider_tip": "Several monasteries in Lumbini offer accommodation to pilgrims for free or donation. The Korean and Myanmar monasteries are particularly welcoming.",
+        "altitude_m": 100
+      },
+      {
+        "day": 2,
+        "location": "Lumbini",
+        "title": "The Sacred Garden",
+        "bullets": [
+          "Maya Devi Temple \u2014 exact birthplace of Siddhartha Gautama",
+          "Ashokan Pillar (249 BC) \u2014 oldest inscription in the Indian subcontinent",
+          "Sacred Pond where Maya Devi bathed before giving birth"
+        ],
+        "insider_tip": "Visit the Maya Devi Temple at 6am before the crowds. The Archaeological site with the marker stone is the most historically significant place in Nepal.",
+        "altitude_m": 100
+      },
+      {
+        "day": 3,
+        "location": "Lumbini",
+        "title": "International monastery zone",
+        "bullets": [
+          "Walk the 3km monastery road \u2014 temples from China, Japan, Korea, Myanmar, Germany, France and 14 other countries",
+          "World Peace Flame at the centre of the zone",
+          "Lumbini Museum for Buddhist art and history"
+        ],
+        "insider_tip": "The Japanese monastery has a 40m white pagoda that's visible from miles away. The interior has remarkable modern Buddhist art.",
+        "altitude_m": 100
+      },
+      {
+        "day": 4,
+        "location": "Lumbini \u2192 Kathmandu",
+        "title": "Final morning reflection, depart",
+        "bullets": [
+          "Early morning meditation in the Sacred Garden (very peaceful)",
+          "Visit Tilaurakot \u2014 the ancient Shakya palace where Buddha spent his youth (25km from Lumbini)",
+          "Afternoon flight back to Kathmandu"
+        ],
+        "insider_tip": "Tilaurakot is completely off the tourist trail \u2014 a ruined palace complex where the Buddha lived as Prince Siddhartha. Hire a bike from Lumbini to visit.",
+        "altitude_m": 100
+      }
+    ],
+    "markup_category": "cultural",
+    "price_from_traveler": 456,
+    "price_to_traveler": 1026,
+    "image": null,
+    "has_real_photo": false
+  }
+]

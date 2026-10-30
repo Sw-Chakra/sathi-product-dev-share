@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sathi — Plan your Nepal trip</title>
+<style>
+  :root {
+    --bg: #f6f4ee; --card: #ffffff; --border: #e3ddd0; --ink: #1c1c1a; --ink-soft: #6e6a5f;
+    --accent: #2d5c45; --accent-soft: #e5efe8; --accent-dark: #1c3d2d;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  nav.topnav { position: sticky; top: 0; z-index: 30; background: var(--card); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 4px; padding: 0 20px; height: 56px; }
+  nav.topnav .brand { font-weight: 800; font-size: 17px; cursor: pointer; margin-right: auto; }
+  nav.topnav button.nav-link { font: inherit; background: none; border: none; padding: 10px 12px; color: var(--ink-soft);
+    cursor: pointer; font-size: 13.5px; border-radius: 8px; }
+  nav.topnav button.nav-link:hover { background: var(--accent-soft); color: var(--accent-dark); }
+  nav.topnav .session-chip { font-size: 12.5px; background: var(--accent-soft); color: var(--accent-dark);
+    padding: 6px 12px; border-radius: 999px; cursor: pointer; font-weight: 600; }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 0 20px 70px; }
+  .view { display: none; }
+  .view.active { display: block; }
+
+  .btn { font: inherit; border: none; border-radius: 10px; padding: 12px 20px; cursor: pointer; font-weight: 700; font-size: 14px; }
+  .btn-primary { background: var(--accent-dark); color: #fff; }
+  .btn-primary:hover { background: #142a20; }
+  .btn-secondary { background: var(--accent-soft); color: var(--accent-dark); }
+  .btn-ghost { background: none; color: var(--accent-dark); text-decoration: underline; padding: 8px 0; }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+
+  /* ===== Home ===== */
+  .hero { padding: 36px 0 10px; }
+  .eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent-dark);
+    background: var(--accent-soft); display: inline-block; padding: 4px 10px; border-radius: 999px; font-weight: 700; margin-bottom: 14px; }
+  h1 { font-size: 32px; margin: 0 0 12px; line-height: 1.15; }
+  .hero p.lede { color: var(--ink-soft); font-size: 15px; max-width: 46ch; margin: 0 0 18px; }
+  .checklist { list-style: none; padding: 0; margin: 0 0 24px; font-size: 13.5px; color: var(--ink-soft); }
+  .checklist li { padding: 4px 0; }
+  .hero-img-wrap { position: relative; border-radius: 16px; overflow: hidden; margin: 20px 0 36px; }
+  .hero-img-wrap img { width: 100%; height: 260px; object-fit: cover; }
+  .hero-img-caption { position: absolute; bottom: 14px; left: 14px; background: rgba(0,0,0,.55); color: #fff;
+    padding: 6px 12px; border-radius: 999px; font-size: 12.5px; }
+
+  h2.section-head { font-size: 22px; margin: 40px 0 16px; }
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .trip-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; cursor: pointer;
+    display: flex; flex-direction: column; }
+  .trip-card:hover { border-color: var(--accent); }
+  .trip-card .thumb { width: 100%; height: 150px; object-fit: cover; background: linear-gradient(135deg, #e5efe8, #cfe0d4); }
+  .trip-card .thumb-placeholder { width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, #e5efe8, #cfe0d4); color: var(--accent-dark); font-size: 13px; font-weight: 600; text-align: center; padding: 10px; }
+  .trip-card .body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+  .focus-tag { font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em; color: var(--accent-dark);
+    background: var(--accent-soft); display: inline-block; padding: 2px 8px; border-radius: 999px; margin-bottom: 8px; width: fit-content; }
+  .trip-card h3 { font-size: 15.5px; margin: 0 0 4px; }
+  .trip-card .meta { font-size: 12px; color: var(--ink-soft); margin-bottom: 10px; }
+  .trip-card .price-row { margin-top: auto; display: flex; justify-content: space-between; align-items: center; }
+  .trip-card .price { font-size: 14px; font-weight: 700; }
+  .trip-card .price small { font-weight: 400; color: var(--ink-soft); font-size: 11px; }
+
+  .why-sathi { background: var(--accent-dark); color: #fff; border-radius: 16px; padding: 28px 24px; margin: 40px 0; }
+  .why-sathi h2 { color: #fff; margin: 0 0 16px; font-size: 20px; }
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 16px; }
+  .why-item { font-size: 13px; }
+  .why-item b { display: block; font-size: 14px; margin-bottom: 3px; }
+  .why-item { color: #d8e6dc; }
+
+  /* ===== Browse ===== */
+  .browse-toolbar { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
+  .browse-toolbar select, .browse-toolbar input { font: inherit; font-size: 13px; padding: 8px 12px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--card); }
+
+  /* ===== Trip detail ===== */
+  .crumb { font-size: 13px; color: var(--ink-soft); margin: 16px 0 10px; cursor: pointer; }
+  .crumb span { color: var(--accent-dark); }
+  .detail-hero { width: 100%; height: 280px; object-fit: cover; border-radius: 14px; margin-bottom: 16px; }
+  .detail-hero-placeholder { width: 100%; height: 280px; border-radius: 14px; margin-bottom: 16px; display: flex;
+    align-items: center; justify-content: center; background: linear-gradient(135deg, #e5efe8, #cfe0d4); color: var(--accent-dark); font-size: 16px; font-weight: 700; }
+  .kicker { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); font-weight: 700; margin-bottom: 6px; }
+  h1.trip-title { font-size: 26px; margin: 0 0 8px; }
+  .trip-desc { color: var(--ink-soft); font-size: 14.5px; max-width: 60ch; margin-bottom: 18px; }
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border);
+    border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 20px; }
+  .stat-cell { background: var(--card); padding: 14px 16px; }
+  .stat-cell .f { font-size: 10.5px; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 4px; }
+  .stat-cell .v { font-size: 14.5px; font-weight: 700; }
+
+  .tab-row { display: flex; gap: 2px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .tab-row button { font: inherit; font-size: 14px; background: none; border: none; padding: 10px 16px; cursor: pointer;
+    color: var(--ink-soft); border-bottom: 2px solid transparent; }
+  .tab-row button.active { color: var(--accent-dark); border-bottom-color: var(--accent-dark); font-weight: 700; }
+  .tab-pane { display: none; } .tab-pane.active { display: block; }
+
+  .included-list { list-style: none; padding: 0; margin: 0 0 20px; }
+  .included-list li { padding: 6px 0; font-size: 14px; }
+  .included-list li:before { content: "✓ "; color: var(--accent-dark); font-weight: 700; }
+
+  .day-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; }
+  .day-card .d-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+  .day-card .d-num { font-weight: 800; color: var(--accent-dark); }
+  .day-card .d-title { font-weight: 700; }
+  .day-card .d-meta { color: var(--ink-soft); font-size: 12px; margin-left: auto; }
+  .day-card ul { margin: 6px 0; padding-left: 18px; font-size: 13.5px; }
+  .day-card .tip { font-size: 12.5px; color: var(--ink-soft); font-style: italic; margin-top: 6px; }
+
+  .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; cursor: pointer; }
+  .faq-item .q { font-weight: 600; font-size: 14.5px; display: flex; justify-content: space-between; }
+  .faq-item .a { color: var(--ink-soft); font-size: 13.5px; margin-top: 8px; display: none; max-width: 60ch; }
+  .faq-item.open .a { display: block; }
+
+  .book-bar { position: sticky; bottom: 0; background: var(--card); border-top: 1px solid var(--border);
+    padding: 14px 20px; margin: 30px -20px 0; display: flex; justify-content: space-between; align-items: center; }
+  .book-bar .price { font-size: 18px; font-weight: 800; }
+  .book-bar .price small { font-size: 12px; font-weight: 400; color: var(--ink-soft); }
+
+  /* ===== Booking flow ===== */
+  .booking-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; max-width: 480px; margin: 24px auto; }
+  .booking-card label { display: block; font-size: 12.5px; font-weight: 700; color: var(--ink-soft); margin: 16px 0 6px; text-transform: uppercase; letter-spacing: .03em; }
+  .booking-card input, .booking-card select { width: 100%; font: inherit; font-size: 14.5px; padding: 11px 13px; border: 1px solid var(--border);
+    border-radius: 9px; background: var(--bg); }
+  .step-dots { display: flex; gap: 6px; justify-content: center; margin-bottom: 18px; }
+  .step-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--border); }
+  .step-dots span.active { background: var(--accent-dark); }
+  .option-card { border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-top: 12px; cursor: pointer; }
+  .option-card:hover { border-color: var(--accent); }
+  .option-card h4 { margin: 0 0 4px; font-size: 14.5px; }
+  .option-card p { margin: 0; font-size: 12.5px; color: var(--ink-soft); }
+  .note-inline { font-size: 11.5px; color: var(--ink-soft); margin-top: 6px; }
+
+  .confirm-box { text-align: center; padding: 30px 10px; }
+  .confirm-box .icon { font-size: 44px; margin-bottom: 10px; }
+  .confirm-box h2 { margin: 0 0 8px; }
+
+  table.simple-table { width: 100%; border-collapse: collapse; font-size: 13px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  table.simple-table th { text-align: left; background: var(--accent-soft); color: var(--accent-dark); padding: 9px 12px; font-size: 11px; text-transform: uppercase; }
+  table.simple-table td { padding: 9px 12px; border-top: 1px solid var(--border); }
+  .empty-note { color: var(--ink-soft); font-size: 13.5px; padding: 30px 0; text-align: center; }
+  footer.disclaimer { max-width: 1040px; margin: 40px auto 0; padding: 0 20px 40px; color: var(--ink-soft); font-size: 11.5px; }
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="brand" onclick="go('home')">Sathi</div>
+  <button class="nav-link" onclick="go('browse')">Browse trips</button>
+  <button class="nav-link" onclick="go('mytrips')">My trips</button>
+  <button class="nav-link" onclick="go('activity')">Activity log</button>
+  <div id="session-area"></div>
+</nav>
+
+<main>
+
+  <!-- ===== HOME ===== -->
+  <div id="view-home" class="view">
+    <div class="hero">
+      <div class="eyebrow">Plan with a local &middot; trips from $342</div>
+      <h1>Big mountains. Little moments.<br>Your Nepal.</h1>
+      <p class="lede">Nepal fits snowy peaks, jungle, old temple towns and quiet lakes into one small country. Pick the story you want, and a local guide will walk it with you.</p>
+      <button class="btn btn-primary" onclick="go('browse')">See all 14 trips</button>
+      <ul class="checklist">
+        <li>✓ Trips from $342 per person</li>
+        <li>✓ A licensed local guide on every trip</li>
+        <li>✓ Every fee shown before you pay</li>
+      </ul>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="assets/images/everest-base-camp-trek.png" alt="Kala Patthar">
+      <div class="hero-img-caption">Kala Patthar, 5,550 m</div>
+    </div>
+
+    <h2 class="section-head">Popular trips</h2>
+    <div class="card-grid" id="popular-trips"></div>
+    <p style="text-align:center;margin-top:16px;"><button class="btn-ghost" onclick="go('browse')">View all trips &rarr;</button></p>
+
+    <div class="why-sathi">
+      <h2>Why Sathi</h2>
+      <div class="why-grid">
+        <div class="why-item"><b>Verified local guides</b>Every trip is run by a certified Nepali operator we know by name, on terms we publish.</div>
+        <div class="why-item"><b>One point of contact</b>Permits, teahouses, transfers and flights are handled for you, by people in the country.</div>
+        <div class="why-item"><b>Honest itineraries</b>Real walking hours, realistic altitudes, real risks. No day is padded to look exciting.</div>
+        <div class="why-item"><b>Change your mind</b>Tell us what to swap and we'll rework the route before you book.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== BROWSE ===== -->
+  <div id="view-browse" class="view">
+    <h1 style="font-size:26px;margin:24px 0 4px;">All trips</h1>
+    <p style="color:var(--ink-soft);font-size:13.5px;margin:0 0 6px;">14 trips. Additional trip details and prices are illustrative and subject to confirmation.</p>
+    <div class="browse-toolbar">
+      <select id="filter-focus" onchange="renderBrowse()">
+        <option value="">All focuses</option>
+      </select>
+      <select id="filter-difficulty" onchange="renderBrowse()">
+        <option value="">Any difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="moderate">Moderate</option>
+        <option value="challenging">Challenging</option>
+      </select>
+    </div>
+    <div class="card-grid" id="browse-grid"></div>
+  </div>
+
+  <!-- ===== TRIP DETAIL ===== -->
+  <div id="view-detail" class="view">
+    <div class="crumb"><span onclick="go('browse')">All trips</span> &rsaquo; <span id="detail-crumb-title"></span></div>
+    <div id="detail-hero-wrap"></div>
+    <div class="kicker" id="detail-kicker"></div>
+    <h1 class="trip-title" id="detail-title"></h1>
+    <p class="trip-desc" id="detail-desc"></p>
+    <div class="stat-grid" id="detail-stats"></div>
+
+    <div class="tab-row">
+      <button class="tab-btn active" data-tab="overview" onclick="switchDetailTab('overview')">Overview</button>
+      <button class="tab-btn" data-tab="itinerary" onclick="switchDetailTab('itinerary')">Itinerary</button>
+      <button class="tab-btn" data-tab="faq" onclick="switchDetailTab('faq')">FAQ</button>
+    </div>
+
+    <div class="tab-pane active" id="pane-overview"></div>
+    <div class="tab-pane" id="pane-itinerary"></div>
+    <div class="tab-pane" id="pane-faq"></div>
+
+    <div class="book-bar">
+      <div class="price" id="detail-price"></div>
+      <button class="btn btn-primary" id="detail-book-btn" onclick="startBooking()">Book this trip</button>
+    </div>
+  </div>
+
+  <!-- ===== BOOKING FLOW ===== -->
+  <div id="view-booking" class="view">
+    <div class="booking-card">
+      <div class="step-dots"><span id="dot-1" class="active"></span><span id="dot-2"></span><span id="dot-3"></span></div>
+
+      <div id="booking-step-1">
+        <h2 style="margin:0 0 4px;" id="booking-trip-title"></h2>
+        <p style="color:var(--ink-soft);font-size:13px;margin:0;" id="booking-trip-sub"></p>
+        <label>Start date</label>
+        <input type="date" id="booking-date" oninput="onStartDateChange()">
+        <label>End date</label>
+        <input type="date" id="booking-end-date">
+        <div class="note-inline" id="booking-duration-note"></div>
+        <label>Travellers</label>
+        <select id="booking-travellers">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+        </select>
+        <div style="margin-top:20px;"><button class="btn btn-primary" style="width:100%;" onclick="bookingNext()">Continue</button></div>
+      </div>
+
+      <div id="booking-step-2" style="display:none;">
+        <h2 style="margin:0 0 14px;font-size:18px;">How should we save this booking?</h2>
+        <div class="option-card" onclick="go('signin')">
+          <h4>Sign in to book</h4>
+          <p>Your trip gets saved to your account so you can find it under "My trips."</p>
+        </div>
+        <div class="option-card" onclick="showEmailCapture()">
+          <h4>Just email me the details</h4>
+          <p>No account needed. We'll just note your interest — this is a prototype, so no email actually gets sent right now.</p>
+        </div>
+        <div id="email-capture-box" style="display:none;">
+          <label>Email</label>
+          <input type="email" id="lead-email" placeholder="you@example.com">
+          <div class="note-inline">This records an event only — no real email is sent in this prototype.</div>
+          <div style="margin-top:16px;"><button class="btn btn-primary" style="width:100%;" onclick="submitLead()">Send me the details</button></div>
+        </div>
+        <button class="btn-ghost" style="margin-top:14px;" onclick="bookingBack()">&larr; Back</button>
+      </div>
+
+      <div id="booking-step-3" style="display:none;">
+        <div class="confirm-box" id="confirm-box-content"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SIGN IN ===== -->
+  <div id="view-signin" class="view">
+    <div class="booking-card">
+      <h2 style="margin:0 0 4px;font-size:19px;">Sign in</h2>
+      <p style="color:var(--ink-soft);font-size:13px;margin:0;">A name and email is enough for this prototype — no password, no real auth.</p>
+      <label>Name</label>
+      <input type="text" id="signin-name" placeholder="Your name">
+      <label>Email</label>
+      <input type="email" id="signin-email" placeholder="you@example.com">
+      <div style="margin-top:20px;"><button class="btn btn-primary" style="width:100%;" onclick="doSignIn()">Sign in</button></div>
+    </div>
+  </div>
+
+  <!-- ===== MY TRIPS ===== -->
+  <div id="view-mytrips" class="view">
+    <h1 style="font-size:24px;margin:24px 0 16px;">My trips</h1>
+    <div id="mytrips-content"></div>
+  </div>
+
+  <!-- ===== ACTIVITY LOG (debug/analytics view) ===== -->
+  <div id="view-activity" class="view">
+    <h1 style="font-size:24px;margin:24px 0 4px;">Activity log</h1>
+    <p style="color:var(--ink-soft);font-size:13px;margin:0 0 16px;">Everything recorded in this browser's local storage — bookings and email-capture leads. Nothing here is sent anywhere.</p>
+    <h3 style="font-size:15px;">Bookings</h3>
+    <div id="activity-bookings"></div>
+    <h3 style="font-size:15px;margin-top:24px;">Leads (unsigned visitors who left an email)</h3>
+    <div id="activity-leads"></div>
+    <div style="margin-top:20px;"><button class="btn btn-secondary" onclick="clearAllData()">Clear all local data</button></div>
+  </div>
+
+</main>
+<footer class="disclaimer">
+  Local prototype &mdash; real catalog data (14 trips from the Sathi codebase), real pricing logic (travelerPrice()
+  markup applied to real operator costs). Bookings, sign-in, and leads are all stored in this browser's local
+  storage only, for demonstration — nothing is sent to a server.
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

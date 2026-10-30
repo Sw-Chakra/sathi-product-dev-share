@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sathi v0 — Journey Walkthrough</title>
+<style>
+  :root {
+    --bg: #f6f4ee; --card: #ffffff; --border: #e3ddd0; --ink: #1c1c1a; --ink-soft: #6e6a5f;
+    --accent: #2d5c45; --accent-soft: #e5efe8;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.5; }
+  nav.topnav { position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 2px; padding: 0 20px; height: 54px; overflow-x: auto; }
+  nav.topnav .brand { font-weight: 800; font-size: 15px; margin-right: 18px; white-space: nowrap; }
+  nav.topnav button { font: inherit; background: none; border: none; padding: 16px 12px; color: var(--ink-soft);
+    cursor: pointer; border-bottom: 2px solid transparent; font-size: 13.5px; white-space: nowrap; }
+  nav.topnav button.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 700; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 20px 70px; }
+  .page { display: none; }
+  .page.active { display: block; }
+  h1 { font-size: 24px; margin: 0 0 6px; }
+  .sub { color: var(--ink-soft); font-size: 14px; margin-bottom: 20px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  video { width: 100%; border-radius: 10px; display: block; background: #000; }
+  .pdf-frame { width: 100%; height: 82vh; border: none; border-radius: 10px; background: #fff; }
+  .pdf-fallback { padding: 14px; font-size: 13px; color: var(--ink-soft); }
+  .pdf-fallback a { color: var(--accent); font-weight: 600; }
+  footer.disclaimer { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; color: var(--ink-soft); font-size: 12px; }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <div class="brand">Sathi v0</div>
+  <button data-page="video">Journey video</button>
+  <button data-page="homepage">Homepage</button>
+  <button data-page="ebc-overview">EBC &middot; Overview</button>
+  <button data-page="ebc-itinerary">EBC &middot; Itinerary</button>
+  <button data-page="ebc-faq">EBC &middot; FAQ</button>
+  <button data-page="all-trips">All trips</button>
+</nav>
+<main>
+
+  <div id="page-video" class="page">
+    <h1>Journey walkthrough</h1>
+    <div class="sub">Recorded walkthrough of the Sathi v0 prototype flow.</div>
+    <div class="card">
+      <video controls preload="metadata" src="assets/journey_video.mp4"></video>
+    </div>
+  </div>
+
+  <div id="page-homepage" class="page">
+    <h1>Homepage</h1>
+    <div class="sub">v0 prototype export.</div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe class="pdf-frame" src="assets/01_homepage.pdf"></iframe>
+      <div class="pdf-fallback">If the preview doesn't load in your browser, <a href="assets/01_homepage.pdf" target="_blank">open the PDF directly</a>.</div>
+    </div>
+  </div>
+
+  <div id="page-ebc-overview" class="page">
+    <h1>Everest Base Camp Trek &mdash; Overview</h1>
+    <div class="sub">Trip detail page, Overview tab.</div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe class="pdf-frame" src="assets/02_ebc_overview.pdf"></iframe>
+      <div class="pdf-fallback">If the preview doesn't load in your browser, <a href="assets/02_ebc_overview.pdf" target="_blank">open the PDF directly</a>.</div>
+    </div>
+  </div>
+
+  <div id="page-ebc-itinerary" class="page">
+    <h1>Everest Base Camp Trek &mdash; Itinerary</h1>
+    <div class="sub">Trip detail page, Itinerary tab.</div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe class="pdf-frame" src="assets/03_ebc_itinerary.pdf"></iframe>
+      <div class="pdf-fallback">If the preview doesn't load in your browser, <a href="assets/03_ebc_itinerary.pdf" target="_blank">open the PDF directly</a>.</div>
+    </div>
+  </div>
+
+  <div id="page-ebc-faq" class="page">
+    <h1>Everest Base Camp Trek &mdash; FAQ</h1>
+    <div class="sub">Trip detail page, FAQ tab.</div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe class="pdf-frame" src="assets/04_ebc_faq.pdf"></iframe>
+      <div class="pdf-fallback">If the preview doesn't load in your browser, <a href="assets/04_ebc_faq.pdf" target="_blank">open the PDF directly</a>.</div>
+    </div>
+  </div>
+
+  <div id="page-all-trips" class="page">
+    <h1>All trips</h1>
+    <div class="sub">Catalog listing &mdash; 14 curated trips.</div>
+    <div class="card" style="padding:0; overflow:hidden;">
+      <iframe class="pdf-frame" src="assets/05_all_trips.pdf"></iframe>
+      <div class="pdf-fallback">If the preview doesn't load in your browser, <a href="assets/05_all_trips.pdf" target="_blank">open the PDF directly</a>.</div>
+    </div>
+  </div>
+
+</main>
+<footer class="disclaimer">
+  Local build &mdash; Sathi v0 prototype assets (journey video + v0.dev screen exports). Not yet deployed publicly.
+</footer>
+<script>
+  function showPage(id) {
+    document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+    document.querySelectorAll("nav.topnav button[data-page]").forEach(b => b.classList.remove("active"));
+    document.getElementById("page-" + id).classList.add("active");
+    const btn = document.querySelector(`nav.topnav button[data-page="${id}"]`);
+    if (btn) btn.classList.add("active");
+    history.replaceState(null, "", "#" + id);
+  }
+  document.querySelectorAll("nav.topnav button[data-page]").forEach(b =>
+    b.addEventListener("click", () => showPage(b.getAttribute("data-page"))));
+  const initial = (location.hash || "#video").replace("#", "");
+  showPage(document.getElementById("page-" + initial) ? initial : "video");
+</script>
+</body>
+</html>
